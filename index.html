@@ -39,7 +39,106 @@
 
   <a href="#">Belanja Sekarang</a>
 
-</section>
+</section><section class="featured-products">
+
+  <h2>Produk Unggulan</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="images/placeholder.jpg" alt="Produk">
+      <h3>Kaos Oversize DHUHA</h3>
+      <p class="price">Rp99.000</p>
+      <button>Beli Sekarang</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/placeholder.jpg" alt="Produk">
+      <h3>Polo Premium DHUHA</h3>
+      <p class="price">Rp149.000</p>
+      <button>Beli Sekarang</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/placeholder.jpg" alt="Produk">
+      <h3>Parfum Signature</h3>
+      <p class="price">Rp129.000</p>
+      <button>Beli Sekarang</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/placeholder.jpg" alt="Produk">
+      <h3>Topi Casual</h3>
+      <p class="price">Rp79.000</p>
+      <button>Beli Sekarang</button>
+    </div>
+
+  </div>
+
+</section>.featured-products{
+padding:70px 20px;
+background:#f5f5f5;
+text-align:center;
+}
+
+.featured-products h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.product-card{
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+}
+
+.product-card img{
+width:100%;
+height:280px;
+object-fit:cover;
+background:#ddd;
+}
+
+.product-card h3{
+margin:15px 0 10px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.product-card button{
+width:90%;
+margin-bottom:20px;
+padding:12px;
+background:#111;
+color:#fff;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.product-card button:hover{
+background:#d4af37;
+color:#111;
+}
 <section class="categories">
 
   <h2>Kategori Produk</h2>
