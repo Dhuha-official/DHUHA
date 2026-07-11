@@ -40,7 +40,47 @@
   <a href="#">Belanja Sekarang</a>
 
 </section>
+<section class="categories">
 
+  <h2>Kategori Produk</h2>
+
+  <div class="category-grid">
+
+    <div class="category-card">
+      <h3>👕 Kaos</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>👔 Polo</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>👔 Kemeja</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>🩳 Oneset</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>🏃 Sportwear</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>🌸 Parfum</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>🧢 Topi</h3>
+    </div>
+
+    <div class="category-card">
+      <h3>👡 Sandal</h3>
+    </div>
+
+  </div>
+
+</section>
 <script src="script.js"></script>
 
 </body>
@@ -158,4 +198,37 @@ nav a{
   font-size:17px;
 }
 
+}
+.categories{
+padding:70px 20px;
+background:#fff;
+text-align:center;
+}
+
+.categories h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.category-card{
+background:#111;
+color:#fff;
+padding:40px 20px;
+border-radius:15px;
+transition:.3s;
+cursor:pointer;
+}
+
+.category-card:hover{
+background:#d4af37;
+color:#111;
+transform:translateY(-8px);
 }
