@@ -8,7 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body><header>
+  <div class="logo">
+    DHUHA
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Collection</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
 <header class="header">
   <div class="container">
@@ -399,4 +410,24 @@ font-weight:bold;
 .new-arrival button:hover{
 background:#111;
 color:#fff;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #ffffff;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 25px;
+  color: #333;
+  font-size: 15px;
 }
