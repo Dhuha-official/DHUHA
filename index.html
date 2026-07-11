@@ -1,273 +1,161 @@
-DHUHA/
-├── index.html
-├── style.css
-├── script.js
-├── images/
-│   ├── logo.png
-│   ├── hero.jpg
-│   └── products/
-├── pages/
-│   ├── katalog.html
-│   ├── parfum.html
-│   └── kontak.html
-<!-- HEADER -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHUHA Official</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <header class="header">
-    <img src="logo.png" alt="DHUHA Logo" class="logo">
+  <div class="container">
 
-    <h1>DHUHA</h1>
-
-    <p class="tagline">
-        Fashion • Perfume • Lifestyle
-    </p>
+    <div class="logo">
+      <img src="images/logo.png" alt="DHUHA Logo">
+      <h1>DHUHA</h1>
+    </div>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#produk">Produk</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#kontak">Kontak</a>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Parfum</a>
+      <a href="#">Fashion</a>
+      <a href="#">Kontak</a>
     </nav>
+
+  </div>
 </header>
-<main>
 
-<section id="produk">
-<h2 style="text-align:center;margin:40px 0;">Produk DHUHA</h2>
+<section class="hero">
 
-<div class="products">
+  <h2>Welcome To DHUHA Official</h2>
 
-<div class="card">
-<img src="images/kaos1.jpg" alt="Kaos">
-<h3>Kaos</h3>
-<p>Kaos premium DHUHA.</p>
-<button>Lihat</button>
-</div>
+  <p>
+    Premium Fashion • Perfume • Lifestyle
+  </p>
 
-<div class="card">
-<img src="images/polo1.jpg" alt="Polo">
-<h3>Polo Shirt</h3>
-<p>Polo elegan untuk sehari-hari.</p>
-<button>Lihat</button>
-</div>
-
-<div class="card">
-<img src="images/kemeja1.jpg" alt="Kemeja">
-<h3>Kemeja</h3>
-<p>Koleksi kemeja formal.</p>
-<button>Lihat</button>
-</div>
-
-<div class="card">
-<img src="images/oneset1.jpg" alt="Oneset">
-<h3>Oneset</h3>
-<p>Outfit siap pakai.</p>
-<button>Lihat</button>
-</div>
-
-<div class="card">
-<img src="images/sport1.jpg" alt="Sportwear">
-<h3>Sportwear</h3>
-<p>Nyaman untuk olahraga.</p>
-<button>Lihat</button>
-</div>
-
-<div class="card">
-<img src="images/parfum1.jpg" alt="Parfum">
-<h3>Parfum</h3>
-<p>Signature fragrance DHUHA.</p>
-<button>Lihat</button>
-</div>
-
-<div class="card">
-<img src="images/topi1.jpg" alt="Topi">
-<h3>Topi</h3>
-<p>Topi casual premium.</p>
-<button>Lihat</button>
-</div>
-
-<div class="card">
-<img src="images/sandal1.jpg" alt="Sandal">
-<h3>Sandal</h3>
-<p>Sandal nyaman dan stylish.</p>
-<button>Lihat</button>
-</div>
-
-</div>
+  <a href="#">Belanja Sekarang</a>
 
 </section>
-<style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+<script src="script.js"></script>
+
+</body>
+</html>*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-background:#f8f8f8;
-color:#222;
+  background:#f8f8f8;
+  color:#222;
 }
 
-header{
-background:#fff;
-padding:20px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
 }
 
-header img{
-width:120px;
-margin-bottom:15px;
-}
-
-header h1{
-font-size:34px;
-margin-bottom:10px;
-}
-
-header p{
-color:#666;
-}
-
-#produk{
-padding:50px 20px;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:#fff;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-transition:.3s;
-<!-- MENU KATEGORI -->
-<section class="menu-kategori">
-
-<input type="text" id="search" placeholder="🔍 Cari produk...">
-
-<div class="kategori">
-
-<button>Semua</button>
-<button>Kaos</button>
-<button>Polo</button>
-<button>Kemeja</button>
-<button>Oneset</button>
-<button>Sportwear</button>
-<button>Parfum</button>
-<button>Topi</button>
-<button>Sandal</button>
-
-</div>
-
-</section>
-<style>
-
-/* CSS Bagian 4 */
-
-*{
-  margin:0;
-  padding:0;
-}
-
-/* CSS lainnya... */
-
-footer{
+.header{
   background:#111;
-  color:#fff;
+  padding:20px 0;
 }
 
-/* ========================= */
-/* CSS Bagian 5 */
-/* ========================= */
-
-.menu-kategori{
-  background:#fff;
-  padding:20px;
-  text-align:center;
-}
-
-#search{
-  width:100%;
-  max-width:500px;
-  padding:12px;
-  border:1px solid #ddd;
-  border-radius:30px;
-  margin-bottom:20px;
-}
-
-.kategori{
+.header .container{
   display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.kategori button{
-  padding:10px 18px;
-  border:none;
-  background:#111;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{
+  width:55px;
+  height:55px;
+}
+
+.logo h1{
   color:#fff;
-  border-radius:25px;
+  font-size:30px;
 }
 
-</style>
-<footer id="kontak">
-
-<h2>DHUHA Official</h2>
-
-<p>Fashion • Perfume • Lifestyle</p>
-
-<p>Email : admin@dhuha.com</p>
-
-<p>WhatsApp : +62 8xxxxxxxxxx</p>
-
-<p>Instagram : @dhuha.official</p>
-
-<p>TikTok : @dhuha.official</p>
-
-<p>© 2026 DHUHA Official. All Rights Reserved.</p>
-
-</footer>
-
-<a href="https://wa.me/6283191855735" class="wa-button">
-💬 Chat WhatsApp
-</a>footer{
-background:#111;
-color:#fff;
-padding:50px 20px;
-text-align:center;
-margin-top:50px;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:25px;
+  transition:.3s;
 }
 
-footer h2{
-margin-bottom:15px;
-font-size:30px;
+nav a:hover{
+  color:#d4af37;
 }
 
-footer p{
-margin:8px 0;
-color:#ddd;
+.hero{
+  height:85vh;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65));
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  padding:20px;
 }
 
-.wa-button{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:15px 22px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.2);
+.hero h2{
+  font-size:52px;
+  margin-bottom:15px;
 }
 
-.wa-button:hover{
-background:#1da851;
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.hero a{
+  background:#d4af37;
+  color:#111;
+  text-decoration:none;
+  padding:14px 35px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.hero a:hover{
+  background:#f0c94a;
+}
+
+@media(max-width:768px){
+
+.header .container{
+  flex-direction:column;
+}
+
+nav{
+  margin-top:20px;
+}
+
+nav a{
+  display:block;
+  margin:10px 0;
+}
+
+.hero h2{
+  font-size:34px;
+}
+
+.hero p{
+  font-size:17px;
+}
+
 }
