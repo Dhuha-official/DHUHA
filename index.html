@@ -8,7 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body><header>
+<body>
+  <header>
+  <section class="hero">
+  <div class="hero-text">
+    <h1>Built With Faith</h1>
+    <p>Driven With Purpose</p>
+    <button>Explore Collection</button>
+  </div>
+  </section>
   <div class="logo">
     DHUHA
   </div>
@@ -430,4 +438,35 @@ nav a {
   margin-left: 25px;
   color: #333;
   font-size: 15px;
+}
+.hero {
+  height: 80vh;
+  background-image: url("images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.hero-text {
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 22px;
+}
+
+.hero-text button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  background: #c9a227;
+  color: white;
+  cursor: pointer;
 }
