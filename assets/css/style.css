@@ -510,3 +510,54 @@ header{
     display:block;
 
     }
+/* SHOP CARD PREMIUM */
+
+.shop-card{
+
+    background:#fff;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+
+.shop-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.shop-card img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+}
+
+
+.shop-card h3{
+
+    font-size:17px;
+
+    font-weight:500;
+
+    margin-top:15px;
+
+}
+
+
+.shop-card p{
+
+    margin-top:8px;
+
+    color:#b08d57;
+
+    font-weight:600;
+
+    }
