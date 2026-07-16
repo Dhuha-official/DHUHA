@@ -1,66 +1,50 @@
-/* Reset Dasar */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* ===== BODY ===== */
 body {
     font-family: 'Poppins', sans-serif;
     background: #111111;
     color: #ffffff;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar {
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:#111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111111;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Logo */
+/* ===== LOGO ===== */
 .logo {
     font-family: 'Cinzel', serif;
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 700;
     color: #C9A227;
 }
 
-/* Menu */
+/* ===== MENU ===== */
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
 }
 
-/* Link */
-.nav-menu{
-    display:flex;
-    list-style:none;
-    gap:40px;
-    margin-left:auto;
+/* ===== LINK ===== */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* Hover */
 .nav-menu a:hover {
     color: #C9A227;
-}
-/* ===== Logo ===== */
-
-.logo{
-    font-family: 'Cinzel', serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #C9A227;
-    text-decoration: none;
-}
-
-/* ===== Navbar ===== */
-
-.navbar{
-    height:80px;
 }
