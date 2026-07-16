@@ -2,48 +2,100 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 /* =====================
-   PROFILE USER
+   PROFILE
 ===================== */
 
 
 let user = localStorage.getItem("user");
 
+
 let username = document.getElementById("username");
 
-let profileMenu = document.getElementById("profileMenu");
+
+let menu = document.getElementById("profileMenu");
 
 
 
-if(user && username && profileMenu){
+if(username){
 
+
+if(user){
 
 username.innerHTML = user;
 
 
+}else{
 
-profileMenu.innerHTML = `
+
+username.innerHTML = "";
+
+
+}
+
+
+}
+
+
+
+
+
+if(menu){
+
+
+if(user){
+
+
+menu.innerHTML = `
+
 
 <a href="account.html">
 Pengaturan
 </a>
 
+
 <a href="orders.html">
 Pesanan
 </a>
+
 
 <a href="wishlist.html">
 Wishlist
 </a>
 
+
 <a href="#" onclick="logout()">
 Logout
 </a>
+
+
+
+`;
+
+
+}else{
+
+
+menu.innerHTML = `
+
+
+<a href="login.html">
+Masuk
+</a>
+
+
+<a href="register.html">
+Daftar
+</a>
+
+
 
 `;
 
 
 }
 
+
+}
 
 
 
@@ -53,17 +105,20 @@ Logout
 ===================== */
 
 
-window.logout = function(){
+window.logout=function(){
 
 
 localStorage.removeItem("user");
 
 
-window.location.href="login.html";
+localStorage.removeItem("userEmail");
+
+
+
+window.location.href="index.html";
 
 
 }
-
 
 
 
@@ -73,81 +128,35 @@ window.location.href="login.html";
 ===================== */
 
 
-let header = document.getElementById("header");
+let header=document.getElementById("header");
+
 
 
 window.addEventListener("scroll",function(){
 
 
-if(window.scrollY > 50){
+if(header){
+
+
+if(window.scrollY>50){
+
 
 header.classList.add("scrolled");
 
+
 }else{
 
+
 header.classList.remove("scrolled");
+
+
+}
+
 
 }
 
 
 });
-
-
-
-
-
-/* =====================
-   AUTO SLIDER
-===================== */
-
-
-function autoSlider(id){
-
-
-let slider = document.getElementById(id);
-
-
-if(!slider) return;
-
-
-
-let position = 0;
-
-
-
-setInterval(function(){
-
-
-position += 270;
-
-
-
-if(position >= slider.scrollWidth - slider.clientWidth){
-
-position = 0;
-
-}
-
-
-
-slider.style.transform =
-`translateX(-${position}px)`;
-
-
-
-},3000);
-
-
-
-}
-
-
-
-
-autoSlider("newCollection");
-
-
-autoSlider("bestSeller");
 
 
 
