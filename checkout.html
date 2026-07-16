@@ -1,105 +1,66 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Checkout | DHUHA</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 
 <link rel="stylesheet" href="assets/css/style.css">
 
+
 </head>
+
+
+
 
 <body>
 
 
-<header>
+
+
+<header id="header">
+
 
 <div class="logo">
+
 DHUHA
-</div>
-
-
-
-<div class="header-right">
-
-
-<a href="cart.html" class="icon">
-
-<span class="material-symbols-outlined">
-shopping_bag
-</span>
-
-</a>
-
-
-
-<div class="profile-menu">
-
-
-<button class="profile-btn">
-
-<span class="material-symbols-outlined">
-person
-</span>
-
-
-<span id="username"></span>
-
-
-</button>
-
-
-
-
-<div class="dropdown" id="profileMenu">
-
-
-<a href="login.html">
-Masuk
-</a>
-
-
-<a href="register.html">
-Daftar
-</a>
-
-
-</div>
-
-
-</div>
-
-
 
 </div>
 
 
 </header>
-
-
-
-
 <section class="checkout-page">
 
 
-<h1>
+<div class="section-title">
+
+
+<h2>
 CHECKOUT
-</h1>
+</h2>
+
+
+</div>
+
+
 
 
 
 <div class="checkout-box">
-
 
 
 <h2>
@@ -107,13 +68,18 @@ Data Pengiriman
 </h2>
 
 
-<input type="text" placeholder="Nama Lengkap">
 
 
-<input type="text" placeholder="Nomor WhatsApp">
+<input type="text" id="customerName" placeholder="Nama Lengkap">
 
 
-<textarea placeholder="Alamat Lengkap"></textarea>
+
+<input type="text" id="phone" placeholder="Nomor WhatsApp">
+
+
+
+<textarea id="address" placeholder="Alamat Lengkap"></textarea>
+
 
 
 
@@ -123,21 +89,25 @@ Metode Pembayaran
 </h2>
 
 
+
+
 <label>
 
-<input type="radio" name="payment">
+<input type="radio" name="payment" value="Transfer Bank">
 
 Transfer Bank
 
 </label>
 
 
+
 <br>
+
 
 
 <label>
 
-<input type="radio" name="payment">
+<input type="radio" name="payment" value="COD">
 
 COD
 
@@ -155,11 +125,17 @@ Pesanan
 </h2>
 
 
-<div id="checkoutProduct"></div>
+
+<div id="checkoutProduct">
+
+</div>
+
 
 
 <h3 id="checkoutTotal">
+
 </h3>
+
 
 
 </div>
@@ -178,122 +154,13 @@ BUAT PESANAN
 </div>
 
 
+
 </section>
+<script src="assets/js/main.js"></script>
 
+<script src="assets/js/checkout.js"></script>
 
 
-
-
-<script>
-
-
-let name = localStorage.getItem("cartProduct") || "Produk DHUHA";
-
-
-let price = Number(localStorage.getItem("cartPrice")) || 0;
-
-
-let image = localStorage.getItem("cartImage") || "assets/images/product1.png";
-
-
-
-document.getElementById("checkoutProduct").innerHTML = `
-
-
-<img src="${image}" width="120">
-
-
-<h3>
-${name}
-</h3>
-
-
-<p>
-Rp${price.toLocaleString()}
-</p>
-
-
-`;
-
-
-
-document.getElementById("checkoutTotal").innerHTML =
-
-"Total : Rp" + price.toLocaleString();
-
-function createOrder(){
-
-localStorage.setItem(
-"orderStatus",
-"Pesanan berhasil dibuat"
-);
-
-
-window.location.href="success.html";
-
-
-}
-
-</script>
-
-<script>
-
-let user = localStorage.getItem("user");
-
-
-let menu = document.getElementById("profileMenu");
-
-let username = document.getElementById("username");
-
-
-
-if(user && menu && username){
-
-
-username.innerHTML = user;
-
-
-
-menu.innerHTML = `
-
-
-<a href="account.html">
-Pengaturan
-</a>
-
-
-<a href="orders.html">
-Pesanan
-</a>
-
-
-<a href="wishlist.html">
-Wishlist
-</a>
-
-
-<a href="#" onclick="logout()">
-Logout
-</a>
-
-
-`;
-
-}
-
-
-
-
-function logout(){
-
-localStorage.removeItem("user");
-
-window.location.href="login.html";
-
-}
-
-
-</script>
 
 </body>
 
