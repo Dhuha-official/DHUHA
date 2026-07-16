@@ -11,41 +11,85 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 
+
 <body>
 
 
+
 <header>
+
 
 <div class="logo">
 DHUHA
 </div>
 
 
+
 <div class="header-right">
 
-<a href="cart.html" class="icon">
+
+<a href="cart.html" class="icon cart-icon">
+
 <span class="material-symbols-outlined">
 shopping_bag
 </span>
+
 </a>
 
 
-<a href="login.html" class="icon">
+
+
+<div class="profile-menu">
+
+
+<button class="profile-btn">
+
 <span class="material-symbols-outlined">
 person
 </span>
+
+
+<span id="username"></span>
+
+
+</button>
+
+
+
+
+<div class="dropdown" id="profileMenu">
+
+
+<a href="login.html">
+Masuk
 </a>
+
+
+<a href="register.html">
+Daftar
+</a>
+
 
 </div>
 
+
+</div>
+
+
+
+</div>
+
+
 </header>
+
+
 
 
 
@@ -57,17 +101,25 @@ SHOP COLLECTION
 </h1>
 
 
+
+
 <div class="filter-menu">
 
+
 <button class="filter-btn">
+
 
 <span class="material-symbols-outlined">
 menu
 </span>
 
+
 FILTER
 
+
 </button>
+
+
 
 
 <div class="filter-box">
@@ -121,29 +173,27 @@ Parfum
 </label>
 
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
 
 
 
 <div class="shop-grid">
 
 
-<div class="shop-card">
+
 <a href="product.html" class="shop-card">
 
 <img src="assets/images/product1.png">
 
-<h3>
-Built With Faith Oversize
-</h3>
-
-<p>
-Rp149.000
-</p>
-
 </a>
+
 
 
 
@@ -151,30 +201,19 @@ Rp149.000
 
 <img src="assets/images/product2.png">
 
-<h3>
-Built With Faith Oversize
-</h3>
-
-<p>
-Rp149.000
-</p>
-
 </a>
+
+
+
 
 
 <a href="product.html" class="shop-card">
 
 <img src="assets/images/product3.png">
 
-<h3>
-Built With Faith Oversize
-</h3>
-
-<p>
-Rp149.000
-</p>
-
 </a>
+
+
 
 
 
@@ -182,23 +221,26 @@ Rp149.000
 
 <img src="assets/images/product4.png">
 
-<h3>
-Built With Faith Oversize
-</h3>
-
-<p>
-Rp149.000
-</p>
-
 </a>
+
 
 
 </div>
 
 
+
+
 </section>
 
-  <script>
+
+
+
+
+
+
+
+<script>
+
 
 let user = localStorage.getItem("user");
 
@@ -209,44 +251,62 @@ let username = document.getElementById("username");
 
 
 
-if(user){
+if(user && menu && username){
+
 
 username.innerHTML = user;
 
 
+
 menu.innerHTML = `
+
 
 <a href="account.html">
 Pengaturan
 </a>
 
+
 <a href="orders.html">
 Pesanan
 </a>
+
 
 <a href="wishlist.html">
 Wishlist
 </a>
 
-<a onclick="logout()">
+
+<a href="#" onclick="logout()">
 Logout
 </a>
 
+
 `;
 
+
 }
+
+
+
 
 
 function logout(){
 
+
 localStorage.removeItem("user");
 
+
 window.location.href="login.html";
+
 
 }
 
 
-  </script>
+
+</script>
+
+
+
 
 </body>
 
