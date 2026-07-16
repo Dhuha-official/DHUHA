@@ -1,1 +1,14 @@
+const SUPABASE_URL = "MASUKKAN_URL_SUPABASE_ANDA";
 
+
+const SUPABASE_KEY = "MASUKKAN_ANON_KEY_SUPABASE_ANDA";
+
+
+
+const supabaseClient = supabase.createClient(
+
+SUPABASE_URL,
+
+SUPABASE_KEY
+
+);
