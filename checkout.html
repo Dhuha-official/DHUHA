@@ -108,7 +108,7 @@ Pesanan
 
 
 
-<button class="checkout-btn">
+<button class="checkout-btn" onclick="createOrder()">
 
 BUAT PESANAN
 
@@ -162,7 +162,18 @@ document.getElementById("checkoutTotal").innerHTML =
 
 "Total : Rp" + price.toLocaleString();
 
+function createOrder(){
 
+localStorage.setItem(
+"orderStatus",
+"Pesanan berhasil dibuat"
+);
+
+
+window.location.href="success.html";
+
+
+}
 
 </script>
 
