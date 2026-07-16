@@ -91,43 +91,25 @@ Daftar
 
 <script>
 
-
 function login(){
 
-
-let email = document.getElementById("email").value;
-
+let name = localStorage.getItem("name");
 
 
-if(email === ""){
+if(name){
 
+localStorage.setItem("user", name);
 
-alert("Masukkan email terlebih dahulu");
+}else{
 
-
-return;
-
+localStorage.setItem("user", "Member DHUHA");
 
 }
 
 
+window.location.href="index.html";
 
-
-localStorage.setItem(
-"user",
-email
-);
-
-
-
-
-window.location.href = "index.html";
-
-
-
-}
-
-
+  }
 
 </script>
 
