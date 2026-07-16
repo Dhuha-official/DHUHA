@@ -928,9 +928,16 @@ header{
     overflow:hidden;
     text-overflow:ellipsis;
 }
+.profile-menu{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+
 .profile-btn{
     background:none;
-    border:0;
+    border:none;
     cursor:pointer;
 
     display:flex;
@@ -943,5 +950,14 @@ header{
 
 
 .profile-btn .material-symbols-outlined{
-    font-size:30px;
+    font-size:28px;
+}
+
+
+#username{
+    display:block;
+    margin-top:4px;
+    font-size:12px;
+    line-height:14px;
+    text-align:center;
 }
