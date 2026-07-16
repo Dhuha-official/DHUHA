@@ -3,27 +3,34 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>DHUHA Official</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>DHUHA Official</title>
 
 
-    <!-- Icon -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<!-- FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+<!-- ICON -->
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="assets/css/style.css">
+
 
 </head>
+
 
 
 <body>
@@ -31,46 +38,61 @@
 
 <!-- HEADER -->
 
-<header>
-
-    <div class="logo">
-        DHUHA
-    </div>
+<header id="header">
 
 
-    <div class="header-right">
+<div class="logo">
+
+DHUHA
+
+</div>
 
 
-        <a href="#" class="icon">
-            <span class="material-symbols-outlined">
-                search
-            </span>
-        </a>
+
+<div class="header-right">
 
 
-        <a href="cart.html" class="icon cart-icon">
 
-            <span class="material-symbols-outlined">
-                shopping_bag
-            </span>
+<a href="shop.html" class="icon">
 
-            <span class="cart-count">
-                0
-            </span>
+<span class="material-symbols-outlined">
+search
+</span>
 
-        </a>
+</a>
 
 
-        <div class="profile-menu">
+
+<a href="cart.html" class="icon cart-icon">
+
+<span class="material-symbols-outlined">
+shopping_bag
+</span>
+
+<span class="cart-count">
+0
+</span>
+
+</a>
+
+
+
+
+<div class="profile-menu">
+
 
 
 <button class="profile-btn">
+
 
 <span class="material-symbols-outlined">
 person
 </span>
 
-<span id="username"></span>
+
+<span id="username">
+</span>
+
 
 </button>
 
@@ -92,41 +114,44 @@ Daftar
 </div>
 
 
-        </div>
+
+</div>
 
 
-    </div>
+
+</div>
 
 
 </header>
-
-
-
-
-<!-- HERO BANNER -->
+<!-- HERO -->
 
 <section class="hero">
 
 
-    <div class="hero-content">
+<div class="hero-overlay"></div>
 
 
-        <h1>
-            BUILT WITH FAITH
-        </h1>
+<div class="hero-content">
 
 
-        <p>
-            Premium Clothing From Indonesia
-        </p>
+<h1>
+BUILT WITH FAITH
+</h1>
 
 
-        <a href="shop.html" class="btn">
-            SHOP NOW
-        </a>
+<p>
+Premium Clothing From Indonesia
+</p>
 
 
-    </div>
+
+<a href="shop.html" class="btn">
+SHOP NOW
+</a>
+
+
+
+</div>
 
 
 </section>
@@ -137,166 +162,234 @@ Daftar
 
 <!-- NEW COLLECTION -->
 
-<section class="new-collection">
+
+<section class="collection-section">
 
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>
-            NEW COLLECTION
-        </h2>
+<h2>
+NEW COLLECTION
+</h2>
 
-    </div>
-
-
-
-    <div class="slider-container">
+</div>
 
 
-        <div class="slider-track">
 
 
-            <div class="slide-card">
-                <img src="assets/images/product1.png">
-            </div>
+<div class="slider-container">
 
 
-            <div class="slide-card">
-                <img src="assets/images/product2.png">
-            </div>
+<div class="slider-track" id="newCollection">
 
 
-            <div class="slide-card">
-                <img src="assets/images/product3.png">
-            </div>
+
+<!-- PRODUCT DARI SUPABASE AKAN MASUK DI SINI -->
 
 
-            <div class="slide-card">
-                <img src="assets/images/product4.png">
-            </div>
+<div class="slide-card">
 
 
-        </div>
+<img src="assets/icons/placeholder.png">
 
 
-    </div>
+<h3>
+DHUHA Collection
+</h3>
+
+
+<p>
+Premium Series
+</p>
+
+
+</div>
+
+
+
+<div class="slide-card">
+
+
+<img src="assets/icons/placeholder.png">
+
+
+<h3>
+Built With Faith
+</h3>
+
+
+<p>
+Premium Series
+</p>
+
+
+</div>
+
+
+
+<div class="slide-card">
+
+
+<img src="assets/icons/placeholder.png">
+
+
+<h3>
+Heritage DHUHA
+</h3>
+
+
+<p>
+Premium Series
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
 
 <a href="shop.html" class="collection-btn">
-    VIEW ALL COLLECTION
+VIEW ALL COLLECTION
 </a>
-</section>
 
+
+
+</section>
 <!-- BEST SELLER -->
 
-<section class="best-seller">
-
-    <div class="section-title">
-
-        <h2>
-            BEST SELLER
-        </h2>
-
-    </div>
+<section class="collection-section">
 
 
-    <div class="manual-slider">
+<div class="section-title">
+
+<h2>
+BEST SELLER
+</h2>
+
+</div>
 
 
-        <div class="manual-track">
+
+<div class="slider-container">
 
 
-            <div class="slide-card">
-                <img src="assets/images/product1.png">
-            </div>
+<div class="slider-track" id="bestSeller">
 
 
-            <div class="slide-card">
-                <img src="assets/images/product2.png">
-            </div>
+
+<div class="slide-card">
+
+<img src="assets/icons/placeholder.png">
 
 
-            <div class="slide-card">
-                <img src="assets/images/product3.png">
-            </div>
+<h3>
+Built With Faith Oversize
+</h3>
 
 
-            <div class="slide-card">
-                <img src="assets/images/product4.png">
-            </div>
+<p>
+DHUHA Premium
+</p>
 
 
-        </div>
+</div>
 
 
-    </div>
+
+<div class="slide-card">
+
+<img src="assets/icons/placeholder.png">
+
+
+<h3>
+Guardian Cat
+</h3>
+
+
+<p>
+DHUHA Premium
+</p>
+
+
+</div>
+
+
+
+<div class="slide-card">
+
+<img src="assets/icons/placeholder.png">
+
+
+<h3>
+Iconic Polo Set
+</h3>
+
+
+<p>
+DHUHA Premium
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
 <a href="shop.html" class="collection-btn">
-    VIEW ALL COLLECTION
-</a>
-             </section>
 
-<script>
+VIEW ALL COLLECTION
 
-
-let user = localStorage.getItem("user");
-
-
-let menu = document.getElementById("profileMenu");
-
-let username = document.getElementById("username");
-
-
-
-if(user){
-
-
-username.innerHTML = user;
-
-
-
-menu.innerHTML = `
-
-
-<a href="account.html">
-Pengaturan
 </a>
 
 
-<a href="orders.html">
-Pesanan
-</a>
+
+</section>
+<!-- FOOTER -->
+
+<footer>
 
 
-<a href="wishlist.html">
-Wishlist
-</a>
+<div class="footer-content">
 
 
-<a onclick="logout()">
-Logout
-</a>
+<h2>
+DHUHA
+</h2>
 
 
-`;
+<p>
+Built With Faith, Driven By Purpose
+</p>
 
 
-}
+</div>
+
+
+</footer>
 
 
 
-function logout(){
 
 
-localStorage.removeItem("user");
+<!-- JAVASCRIPT -->
 
 
-window.location.href="index.html";
+<script src="assets/js/main.js"></script>
 
 
-}
 
-
-</script>
-    
 </body>
 
 </html>
