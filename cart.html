@@ -53,6 +53,7 @@ person
 
 
 
+
 <section class="cart-page">
 
 
@@ -64,29 +65,7 @@ SHOPPING BAG
 
 <div class="cart-item">
 
-
-<img src="assets/images/product1.png">
-
-
-<div>
-
-<div id="cartProduct"></div>
-
-<div class="quantity">
-
-<button>-</button>
-
-<span>
-1
-</span>
-
-<button>+</button>
-
-</div>
-
-
-</div>
-
+    <div id="cartProduct"></div>
 
 </div>
 
@@ -100,8 +79,7 @@ TOTAL
 </h2>
 
 
-<h3>
-Rp149.000
+<h3 id="cartTotal">
 </h3>
 
 
@@ -119,7 +97,11 @@ CHECKOUT
 
 </section>
 
+
+
+
 <script>
+
 
 let name = localStorage.getItem("cartProduct");
 
@@ -128,32 +110,61 @@ let price = localStorage.getItem("cartPrice");
 let image = localStorage.getItem("cartImage");
 
 
+
 document.getElementById("cartProduct").innerHTML = `
+
 
 <img src="${image}">
 
+
 <div>
 
-<h3>${name}</h3>
+<h3>
+${name}
+</h3>
 
-<p>Rp${Number(price).toLocaleString()}</p>
+
+<p>
+Rp${Number(price).toLocaleString()}
+</p>
+
 
 
 <div class="quantity">
 
-<button>-</button>
+<button>
+-
+</button>
 
-<span>1</span>
 
-<button>+</button>
+<span>
+1
+</span>
+
+
+<button>
++
+</button>
 
 </div>
 
+
 </div>
+
 
 `;
 
+
+
+document.getElementById("cartTotal").innerHTML =
+
+"Rp" + Number(price).toLocaleString();
+
+
+
 </script>
+
+
 
 </body>
 
