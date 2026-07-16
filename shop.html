@@ -117,8 +117,7 @@ FILTER
 </button>
 
 
-
-<div class="filter-box">
+<div class="filter-box" id="filterBox">
 
 
 <label>
@@ -334,7 +333,25 @@ window.location.href="login.html";
 </script>
 
 
+<script>
 
+function toggleFilter(){
+
+let filter = document.getElementById("filterBox");
+
+if(filter.style.display === "flex"){
+
+filter.style.display="none";
+
+}else{
+
+filter.style.display="flex";
+
+}
+
+}
+
+</script>
 
 </body>
 
