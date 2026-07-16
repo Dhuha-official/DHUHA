@@ -1020,3 +1020,89 @@ font-size:14px;
 font-weight:500;
 
 }
+/* ACCOUNT */
+
+
+.account-page{
+
+padding:130px 8% 80px;
+
+}
+
+
+.account-page h1{
+
+text-align:center;
+
+font-family:'Cinzel',serif;
+
+margin-bottom:40px;
+
+}
+
+
+
+.account-box{
+
+max-width:500px;
+
+margin:auto;
+
+}
+
+
+
+.account-box label{
+
+display:block;
+
+margin-top:20px;
+
+font-weight:500;
+
+}
+
+
+
+.account-box input,
+.account-box textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-top:8px;
+
+border:1px solid #ddd;
+
+font-family:'Poppins';
+
+}
+
+
+
+.account-box textarea{
+
+height:120px;
+
+}
+
+
+
+.account-box button{
+
+margin-top:30px;
+
+width:100%;
+
+padding:15px;
+
+background:#111;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+    }
