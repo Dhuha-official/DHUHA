@@ -51,8 +51,7 @@ productList.innerHTML += `
 <a href="product.html?id=${product.id}" class="shop-card">
 
 
-<img src="${product.image_url}">
-
+<img src="https://yjddkxffzqowrkkoqwth.supabase.co/storage/v1/object/public/product-images/product3.png">
 
 
 <h3>
