@@ -1117,3 +1117,32 @@ border:none;
 cursor:pointer;
 
     }
+.profile-btn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+}
+
+
+.profile-btn .material-symbols-outlined{
+    font-size:28px;
+}
+
+
+#username{
+    display:block;
+    margin-top:3px;
+    font-size:11px;
+    line-height:12px;
+}
+
+
+.profile-menu{
+    display:flex;
+    align-items:center;
+}
