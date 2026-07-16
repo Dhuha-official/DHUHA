@@ -7,7 +7,7 @@ async function getProducts(){
 
 const { data, error } = await supabaseClient
 
-.from("products")
+.from("products_dhuha")
 
 .select("*")
 
