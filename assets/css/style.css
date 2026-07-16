@@ -935,7 +935,7 @@ header{
 
 
 .profile-btn{
-    border:none;
+    border:0;
     background:none;
     display:flex;
     flex-direction:column;
@@ -950,19 +950,12 @@ header{
 
 
 #username{
-    font-size:12px;
-    margin-top:4px;
-    text-align:center;
-}
-
-
-#username{
     display:block;
-    margin-top:4px;
     font-size:12px;
-    line-height:14px;
+    margin-top:5px;
     text-align:center;
 }
+
 .slider-container{
     overflow:hidden;
     width:100%;
@@ -984,3 +977,42 @@ header{
     width:100%;
     border-radius:12px;
 }
+.new-collection,
+.best-seller{
+    padding:60px 8%;
+}
+
+
+.section-title h2{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    font-size:35px;
+    letter-spacing:3px;
+    margin-bottom:30px;
+}
+
+
+.slider-container,
+.manual-slider{
+    overflow:hidden;
+    width:100%;
+}
+
+
+.slider-track,
+.manual-track{
+    display:flex;
+    gap:20px;
+}
+
+
+.slide-card{
+    min-width:250px;
+    flex-shrink:0;
+}
+
+
+.slide-card img{
+    width:100%;
+    border-radius:12px;
+   }
