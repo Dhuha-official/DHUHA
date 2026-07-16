@@ -835,3 +835,73 @@ header{
 }
 
 }
+/* CHECKOUT */
+
+.checkout-page{
+
+padding:130px 8% 80px;
+
+}
+
+
+.checkout-page h1{
+
+text-align:center;
+
+font-family:'Cinzel',serif;
+
+margin-bottom:40px;
+
+}
+
+
+.checkout-box{
+
+max-width:600px;
+
+margin:auto;
+
+}
+
+
+.checkout-box input,
+.checkout-box textarea{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border:1px solid #ddd;
+
+font-family:'Poppins';
+
+}
+
+
+.checkout-box textarea{
+
+height:120px;
+
+}
+
+
+.checkout-box h2{
+
+margin-top:30px;
+
+margin-bottom:15px;
+
+}
+
+
+.order-summary{
+
+margin-top:30px;
+
+padding:25px;
+
+background:#f8f8f8;
+
+}
