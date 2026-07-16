@@ -8,6 +8,10 @@
 
 <title>Register | DHUHA</title>
 
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
 <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -42,12 +46,14 @@ placeholder="Nama Lengkap">
 
 <input 
 type="email"
+id="email"
 placeholder="Email">
 
 
 
 <input 
 type="password"
+id="password"
 placeholder="Password">
 
 
@@ -59,10 +65,23 @@ DAFTAR
 </button>
 
 
+
+<p>
+
+Sudah punya akun?
+
+<a href="login.html">
+Masuk
+</a>
+
+</p>
+
+
 </div>
 
 
 </section>
+
 
 
 
@@ -71,8 +90,31 @@ DAFTAR
 
 function register(){
 
+
 let name =
 document.getElementById("name").value;
+
+
+let email =
+document.getElementById("email").value;
+
+
+let password =
+document.getElementById("password").value;
+
+
+
+if(name === "" || email === "" || password === ""){
+
+
+alert("Lengkapi data terlebih dahulu");
+
+
+return;
+
+
+}
+
 
 
 localStorage.setItem(
@@ -81,10 +123,27 @@ name
 );
 
 
+
+localStorage.setItem(
+"email",
+email
+);
+
+
+
+localStorage.setItem(
+"password",
+password
+);
+
+
+
 window.location.href="index.html";
 
 
+
 }
+
 
 
 </script>
