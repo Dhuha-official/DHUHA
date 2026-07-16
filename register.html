@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | DHUHA</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="login-page">
+
+
+<div class="login-box">
+
+
+<h1>
+DHUHA
+</h1>
+
+
+<h2>
+DAFTAR
+</h2>
+
+
+
+<input 
+type="text"
+id="name"
+placeholder="Nama Lengkap">
+
+
+
+<input 
+type="email"
+placeholder="Email">
+
+
+
+<input 
+type="password"
+placeholder="Password">
+
+
+
+<button onclick="register()">
+
+DAFTAR
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+function register(){
+
+let name =
+document.getElementById("name").value;
+
+
+localStorage.setItem(
+"user",
+name
+);
+
+
+window.location.href="index.html";
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
