@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | DHUHA</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="login-page">
+
+
+<div class="login-box">
+
+
+<h1>
+DHUHA
+</h1>
+
+
+<h2>
+MASUK
+</h2>
+
+
+<input 
+type="email"
+id="email"
+placeholder="Email">
+
+
+<input 
+type="password"
+id="password"
+placeholder="Password">
+
+
+
+<button onclick="login()">
+
+MASUK
+
+</button>
+
+
+<p>
+Belum punya akun?
+<a href="register.html">
+Daftar
+</a>
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+function login(){
+
+localStorage.setItem(
+"user",
+"DHUHA Member"
+);
+
+
+window.location.href="index.html";
+
+
+}
+
+</script>
+
+
+</body>
+
+</html>
