@@ -917,3 +917,31 @@ header{
 
     z-index:999;
 }
+#username{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+    line-height:16px;
+    max-width:70px;
+    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.profile-btn{
+    background:none;
+    border:0;
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+}
+
+
+.profile-btn .material-symbols-outlined{
+    font-size:30px;
+}
