@@ -1,208 +1,104 @@
-<!DOCTYPE html>
-<html lang="id">
+document.addEventListener("DOMContentLoaded", function(){
 
 
-<head>
 
+let product = {
 
-<meta charset="UTF-8">
 
+name:"Built With Faith Oversize",
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+price:198000,
 
-<title>Product | DHUHA</title>
 
+image:"assets/icons/placeholder.png",
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+description:"Premium oversize t-shirt DHUHA dengan konsep Built With Faith."
 
 
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
+};
 
-<link rel="stylesheet" href="assets/css/style.css">
 
 
 
-</head>
+let name = document.getElementById("productName");
 
+let price = document.getElementById("productPrice");
 
+let image = document.getElementById("productImage");
 
-<body>
+let description = document.getElementById("productDescription");
 
 
 
-<header id="header">
 
+if(name){
 
-<div class="logo">
+name.innerHTML = product.name;
 
-DHUHA
+}
 
-</div>
 
 
+if(price){
 
+price.innerHTML = "Rp" + product.price.toLocaleString();
 
-<div class="header-right">
+}
 
 
-<a href="cart.html" class="icon">
 
+if(image){
 
-<span class="material-symbols-outlined">
-shopping_bag
-</span>
+image.src = product.image;
 
+}
 
-</a>
 
 
+if(description){
 
-<div class="profile-menu">
+description.innerHTML = product.description;
 
+}
 
-<button class="profile-btn">
 
 
-<span class="material-symbols-outlined">
-person
-</span>
 
 
-<span id="username"></span>
 
+window.addToCart=function(){
 
-</button>
 
 
+localStorage.setItem(
+"cartProduct",
+product.name
+);
 
-<div class="dropdown" id="profileMenu">
 
 
-<a href="login.html">
-Masuk
-</a>
+localStorage.setItem(
+"cartPrice",
+product.price
+);
 
 
-<a href="register.html">
-Daftar
-</a>
 
+localStorage.setItem(
+"cartImage",
+product.image
+);
 
-</div>
 
 
-</div>
 
+window.location.href="cart.html";
 
+}
 
-</div>
 
 
-</header>
-<section class="product-detail">
-
-
-<div class="product-image">
-
-
-<img id="productImage" src="assets/icons/placeholder.png">
-
-
-</div>
-
-
-
-
-
-<div class="product-info-detail">
-
-
-<h1 id="productName">
-
-Built With Faith Oversize
-
-</h1>
-
-
-
-<h2 id="productPrice">
-
-Rp198.000
-
-</h2>
-
-
-
-
-<p id="productDescription">
-
-Premium oversize t-shirt DHUHA dengan konsep Built With Faith.
-
-</p>
-
-
-
-
-
-<h3>
-Pilih Ukuran
-</h3>
-
-
-
-
-<div class="size">
-
-
-<button>
-S
-</button>
-
-
-<button>
-M
-</button>
-
-
-<button>
-L
-</button>
-
-
-<button>
-XL
-</button>
-
-
-
-</div>
-
-
-
-
-
-<button class="add-cart" onclick="addToCart()">
-
-ADD TO CART
-
-</button>
-
-
-
-</div>
-
-
-
-</section>
-<script src="assets/js/main.js"></script>
-
-<script src="assets/js/product.js"></script>
-
-
-
-</body>
-
-</html>
+});
