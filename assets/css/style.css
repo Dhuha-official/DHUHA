@@ -25,16 +25,19 @@ img{
 }
 
 
-
 /* =========================
    HEADER
 ========================= */
 
 header{
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
+
     height:75px;
 
     padding:0 40px;
@@ -42,72 +45,137 @@ header{
     background:#fff;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     box-shadow:0 2px 12px rgba(0,0,0,.08);
 
     z-index:999;
+
 }
 
 
 .logo{
+
     font-family:'Cinzel',serif;
+
     font-size:28px;
+
     font-weight:700;
+
     letter-spacing:5px;
+
 }
+
 
 
 .header-right{
+
     display:flex;
+
     align-items:center;
+
     gap:22px;
+
 }
+
 
 
 .icon{
-    color:#111;
+
     display:flex;
+
     align-items:center;
+
+    color:#111;
+
 }
+
 
 
 .material-symbols-outlined{
+
     font-size:28px;
+
 }
 
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
+
 
 .profile-menu{
+
     position:relative;
+
 }
+
 
 
 .profile-btn{
+
     background:none;
-    border:0;
+
+    border:none;
+
     cursor:pointer;
 
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
+
+    justify-content:center;
+
+    padding:0;
+
 }
 
 
+
+.profile-btn .material-symbols-outlined{
+
+    font-size:28px;
+
+}
+
+
+
 #username{
-    font-size:11px;
-    margin-top:3px;
+
+    display:block;
+
+    margin-top:4px;
+
+    font-size:12px;
+
+    line-height:14px;
+
+    max-width:80px;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
 }
 
 
 
 .dropdown{
+
     position:absolute;
 
     right:0;
+
     top:55px;
 
     width:180px;
@@ -121,22 +189,33 @@ header{
     display:none;
 
     overflow:hidden;
+
 }
+
 
 
 .dropdown a{
+
     display:block;
+
     padding:14px 18px;
+
 }
+
 
 
 .dropdown a:hover{
+
     background:#f5f5f5;
+
 }
 
 
+
 .profile-menu:hover .dropdown{
+
     display:block;
+
 }
 
 
@@ -145,7 +224,9 @@ header{
    HERO
 ========================= */
 
+
 .hero{
+
     margin-top:75px;
 
     height:92vh;
@@ -154,34 +235,47 @@ header{
     center/cover no-repeat;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     position:relative;
 
     text-align:center;
+
 }
+
 
 
 .hero::before{
+
     content:"";
 
     position:absolute;
+
     inset:0;
 
     background:rgba(0,0,0,.45);
+
 }
+
 
 
 .hero-content{
+
     position:relative;
+
     z-index:2;
 
     color:#fff;
+
 }
 
 
+
 .hero h1{
+
     font-family:'Cinzel',serif;
 
     font-size:60px;
@@ -189,15 +283,21 @@ header{
     letter-spacing:4px;
 
     margin-bottom:20px;
+
 }
+
 
 
 .hero p{
+
     margin-bottom:35px;
+
 }
 
 
+
 .btn{
+
     display:inline-block;
 
     padding:15px 45px;
@@ -209,12 +309,17 @@ header{
     border-radius:40px;
 
     font-weight:600;
+
 }
 
 
+
 .btn:hover{
+
     background:#111;
+
     color:#fff;
+
 }
 /* =========================
    SHOP PAGE
@@ -223,7 +328,6 @@ header{
 .shop-page{
     padding:120px 8% 60px;
 }
-
 
 .shop-page h1{
     font-family:'Cinzel',serif;
@@ -234,32 +338,29 @@ header{
 }
 
 
-
-/* FILTER */
+/* =========================
+   FILTER
+========================= */
 
 .filter-menu{
     position:relative;
     margin-bottom:40px;
 }
 
-
 .filter-btn{
-    background:none;
-    border:1px solid #111;
-
-    padding:12px 25px;
-
-    cursor:pointer;
-
     display:flex;
     align-items:center;
     gap:8px;
-}
 
-.filter-menu{
-    position:relative;
-}
+    background:#fff;
+    border:1px solid #111;
 
+    padding:12px 24px;
+
+    cursor:pointer;
+
+    font-size:14px;
+}
 
 .filter-box{
     display:none;
@@ -275,337 +376,303 @@ header{
 
     padding:20px;
 
-    flex-direction:column;
-
-    gap:12px;
+    border-radius:12px;
 
     box-shadow:0 10px 25px rgba(0,0,0,.15);
 
-    border-radius:12px;
+    flex-direction:column;
+
+    gap:12px;
 
     z-index:999;
 }
 
 .filter-box label{
+    display:flex;
+    align-items:center;
+    gap:10px;
     font-size:14px;
 }
 
 
+/* =========================
+   COLLECTION
+========================= */
 
-/* PRODUCT GRID */
+.new-collection,
+.best-seller{
+    padding:60px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+..section-title h2{
+    font-family:'Cinzel',serif;
+    font-size:36px;
+    letter-spacing:3px;
+}
+
+.slider-container,
+.manual-slider{
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+}
+
+.slider-container::-webkit-scrollbar,
+.manual-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.slider-track,
+.manual-track{
+    display:flex;
+    gap:20px;
+}
+
+.slide-card{
+    flex:0 0 260px;
+}
+
+.slide-card img{
+    width:100%;
+    border-radius:14px;
+}
+
+.collection-btn{
+    display:block;
+
+    width:max-content;
+
+    margin:35px auto 0;
+
+    padding:14px 34px;
+
+    border:1px solid #111;
+
+    border-radius:40px;
+
+    font-weight:600;
+}/* =========================
+   SHOP GRID
+========================= */
 
 .shop-grid{
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
     gap:30px;
 }
 
-
 .shop-card{
     display:block;
-
-    color:#111;
-
     transition:.3s;
 }
 
-
 .shop-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
-
 
 .shop-card img{
     width:100%;
-
     aspect-ratio:1/1;
-
     object-fit:cover;
-
     border-radius:12px;
 }
 
-
 .shop-card h3{
     margin-top:15px;
+    font-size:16px;
+    font-weight:500;
 }
-
 
 .shop-card p{
+    margin-top:6px;
     color:#b08d57;
-}
-
-
-
-
-
+    font-weight:600;
+   }
 /* =========================
    PRODUCT DETAIL
 ========================= */
 
-
 .product-detail{
-
     padding:120px 8% 60px;
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:50px;
 
     align-items:center;
-
 }
-
 
 .product-image img{
-
     width:100%;
-
     border-radius:15px;
-
 }
-
-
 
 .product-info-detail h1{
-
     font-family:'Cinzel',serif;
-
     font-size:40px;
-
     margin-bottom:15px;
-
 }
-
 
 .product-info-detail h2{
-
     color:#b08d57;
-
     margin-bottom:20px;
-
 }
-
-
 
 .product-info-detail p{
-
     margin-bottom:30px;
-
+    line-height:1.7;
 }
-
-
 
 .size{
-
     display:flex;
-
     gap:12px;
-
     margin:20px 0;
-
 }
 
-
-
 .size button{
-
-    width:45px;
-
-    height:40px;
-
-    background:#fff;
+    width:48px;
+    height:42px;
 
     border:1px solid #111;
+    background:#fff;
 
     cursor:pointer;
 
+    transition:.2s;
 }
 
-
-
+.size button:hover{
+    background:#111;
+    color:#fff;
+}
 
 .add-cart{
-
     width:100%;
 
     padding:16px;
+
+    border:none;
+
+    border-radius:40px;
 
     background:#111;
 
     color:#fff;
 
-    border:none;
-
     cursor:pointer;
 
     font-weight:600;
+}
 
-    }
+
 /* =========================
    CART PAGE
 ========================= */
 
 .cart-page{
-
     padding:120px 8% 60px;
-
 }
-
 
 .cart-page h1{
-
     font-family:'Cinzel',serif;
-
     text-align:center;
-
     font-size:40px;
-
     letter-spacing:4px;
-
     margin-bottom:40px;
-
 }
-
-
 
 .cart-item{
-
     display:flex;
-
     gap:25px;
-
     align-items:center;
 
     margin-bottom:40px;
-
 }
-
-
 
 .cart-item img{
-
     width:150px;
-
     border-radius:12px;
-
 }
-
-
 
 .quantity{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
     margin-top:15px;
-
 }
 
-
-
 .quantity button{
-
-    width:35px;
-
-    height:35px;
+    width:36px;
+    height:36px;
 
     border:1px solid #111;
 
     background:#fff;
 
     cursor:pointer;
-
 }
-
-
 
 .cart-total{
-
     border-top:1px solid #ddd;
-
     padding-top:30px;
-
 }
-
-
 
 .cart-total h3{
-
     margin:15px 0;
-
     color:#b08d57;
-
 }
 
-
-
 .checkout-btn{
-
     display:inline-block;
 
     padding:15px 40px;
+
+    border-radius:40px;
 
     background:#111;
 
     color:#fff;
 
-    border-radius:30px;
-
+    font-weight:600;
 }
-
-
-
 
 
 /* =========================
-   CHECKOUT PAGE
+   CHECKOUT
 ========================= */
 
-
 .checkout-page{
-
     padding:120px 8% 60px;
-
 }
-
-
 
 .checkout-page h1{
-
     font-family:'Cinzel',serif;
-
     text-align:center;
-
     font-size:40px;
-
     margin-bottom:40px;
-
 }
-
-
 
 .checkout-box{
-
     max-width:600px;
-
     margin:auto;
-
 }
 
-
+.checkout-box h2{
+    margin:25px 0 10px;
+}
 
 .checkout-box input,
 .checkout-box textarea{
-
     width:100%;
 
     padding:15px;
@@ -615,404 +682,164 @@ header{
     border:1px solid #ddd;
 
     font-family:'Poppins',sans-serif;
-
 }
-
-
 
 .checkout-box textarea{
-
     height:120px;
-
     resize:none;
-
 }
-
-
-
-.checkout-box h2{
-
-    margin:25px 0 10px;
-
-}
-
-
 
 .order-summary{
-
     margin-top:30px;
 
     padding:20px;
 
     border:1px solid #ddd;
 
+    border-radius:12px;
 }
-
-
 
 .order-summary img{
-
+    width:120px;
+    border-radius:12px;
     margin-bottom:15px;
-
-}
-/* =========================
+   }/* =========================
    LOGIN & REGISTER
 ========================= */
 
 .login-page{
-
     min-height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     background:#fff;
-
 }
-
-
 
 .login-box{
-
     width:100%;
-
-    max-width:400px;
-
+    max-width:420px;
     padding:40px;
-
     text-align:center;
-
 }
-
-
 
 .login-box h1{
-
     font-family:'Cinzel',serif;
-
-    font-size:40px;
-
+    font-size:42px;
     letter-spacing:5px;
-
     margin-bottom:20px;
-
 }
-
-
 
 .login-box h2{
-
     margin-bottom:30px;
-
 }
-
-
 
 .login-box input{
-
     width:100%;
-
     padding:15px;
-
     margin:10px 0;
-
     border:1px solid #ddd;
-
+    border-radius:8px;
+    font-family:'Poppins',sans-serif;
 }
-
-
 
 .login-box button{
-
     width:100%;
-
     padding:15px;
-
     margin-top:20px;
-
     background:#111;
-
     color:#fff;
-
     border:none;
-
+    border-radius:40px;
     cursor:pointer;
-
+    font-weight:600;
 }
-
-
 
 .login-box p{
-
     margin-top:20px;
-
 }
-
 
 
 /* =========================
-   RESPONSIVE MOBILE
+   RESPONSIVE
 ========================= */
 
-
-@media(max-width:768px){
-
+@media (max-width:768px){
 
 header{
-
     height:65px;
-
     padding:0 20px;
-
 }
-
 
 .logo{
-
     font-size:22px;
-
     letter-spacing:3px;
-
 }
-
-
 
 .header-right{
-
-    gap:15px;
-
+    gap:14px;
 }
-
-
 
 .material-symbols-outlined{
-
     font-size:24px;
-
 }
-
-
 
 .hero{
-
     margin-top:65px;
-
-    height:80vh;
-
+    height:75vh;
 }
-
-
 
 .hero h1{
-
-    font-size:38px;
-
+    font-size:36px;
 }
-
-
 
 .hero p{
-
     font-size:14px;
-
 }
-
-
 
 .shop-page,
+.product-detail,
 .cart-page,
 .checkout-page{
-
-    padding:100px 20px 40px;
-
+    padding:95px 20px 40px;
 }
-
-
 
 .product-detail{
-
-    padding:100px 20px 40px;
-
     grid-template-columns:1fr;
-
+    gap:30px;
 }
-
-
 
 .product-info-detail h1{
-
     font-size:30px;
-
 }
-
-
 
 .shop-grid{
-
     grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-
+    gap:16px;
 }
-
-
-
-.cart-item{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-}
-
-
-
-.cart-item img{
-
-    width:100%;
-
-}
-
-
-
-.login-box{
-
-    padding:25px;
-
-}
-
-
-
-}
-.filter-menu{
-    position:relative;
-}
-
-
-.filter-box{
-    display:none;
-
-    position:absolute;
-
-    top:55px;
-
-    left:0;
-
-    width:220px;
-
-    background:#fff;
-
-    padding:20px;
-
-    flex-direction:column;
-
-    gap:12px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-    border-radius:12px;
-
-    z-index:999;
-}
-#username{
-    display:block;
-    margin-top:5px;
-    font-size:13px;
-    line-height:16px;
-    max-width:70px;
-    text-align:center;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-}
-.profile-menu{
-.profile-menu{
-    position:relative;
-}
-
-
-.profile-btn{
-    border:0;
-    background:none;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    cursor:pointer;
-}
-
-
-.profile-btn .material-symbols-outlined{
-    font-size:28px;
-}
-
-
-#username{
-    display:block;
-    font-size:12px;
-    margin-top:5px;
-    text-align:center;
-}
-
-.slider-container{
-    overflow:hidden;
-    width:100%;
-}
-
-
-.slider-track{
-    display:flex;
-    gap:20px;
-}
-
-
-.slider-track .slide-card{
-    min-width:250px;
-}
-
-
-.slide-card img{
-    width:100%;
-    border-radius:12px;
-}
-.new-collection,
-.best-seller{
-    padding:60px 8%;
-}
-
-
-.section-title h2{
-    font-family:'Cinzel',serif;
-    text-align:center;
-    font-size:35px;
-    letter-spacing:3px;
-    margin-bottom:30px;
-}
-
-
-.slider-container,
-.manual-slider{
-    overflow:hidden;
-    width:100%;
-}
-
-
-.slider-track,
-.manual-track{
-    display:flex;
-    gap:20px;
-}
-
 
 .slide-card{
-    min-width:250px;
-    flex-shrink:0;
+    flex:0 0 75%;
 }
 
+.cart-item{
+    flex-direction:column;
+    align-items:flex-start;
+}
 
-.slide-card img{
+.cart-item img{
     width:100%;
-    border-radius:12px;
+}
+
+.login-box{
+    padding:25px;
+}
+
+.profile-btn .material-symbols-outlined{
+    font-size:24px;
+}
+
+#username{
+    font-size:11px;
+    max-width:65px;
+}
    }
