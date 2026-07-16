@@ -57,10 +57,12 @@ body {
 }
 /* ===== Logo ===== */
 
-.logo img{
-    width:60px;
-    height:auto;
-    display:block;
+.logo{
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #C9A227;
+    text-decoration: none;
 }
 
 /* ===== Navbar ===== */
