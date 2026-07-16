@@ -59,23 +59,6 @@
 
 </header>
 
-<section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-        <h1>BUILT WITH FAITH</h1>
-
-        <p>Premium Clothing From Indonesia</p>
-
-        <a href="shop.html" class="btn">
-            SHOP NOW
-        </a>
-
-    </div>
-
-</section>
 <section class="new-collection">
 
     <div class="section-title">
@@ -88,22 +71,18 @@
 
             <div class="slide-card">
                 <img src="assets/images/product1.png">
-                <h3>Built With Faith Oversize</h3>
             </div>
 
             <div class="slide-card">
                 <img src="assets/images/product2.png">
-                <h3>Iconic DHUHA Polo</h3>
             </div>
 
             <div class="slide-card">
                 <img src="assets/images/product3.png">
-                <h3>DHUHA Lifestyle Jersey</h3>
             </div>
 
             <div class="slide-card">
                 <img src="assets/images/product4.png">
-                <h3>Heritage Collection</h3>
             </div>
 
         </div>
@@ -111,57 +90,7 @@
     </div>
 
 </section>
-<script>
 
-const products=[
-
-{
-name:"Oversize Built With Faith",
-image:"assets/images/product1.png"
-},
-
-{
-name:"Premium Polo",
-image:"assets/images/product2.png"
-},
-
-{
-name:"Lifestyle Jersey",
-image:"assets/images/product3.png"
-},
-
-{
-name:"Heritage Oversize",
-image:"assets/images/product4.png"
-}
-
-];
-
-const container=document.getElementById("newCollection");
-
-products.forEach(item=>{
-
-container.innerHTML+=`
-
-<div class="product-card">
-
-<img src="${item.image}">
-
-<div class="product-info">
-
-<div class="product-name">${item.name}</div>
-
-<div class="product-price">${item.price}</div>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-    </script>
     
 </body>
 </html>
