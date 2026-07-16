@@ -561,3 +561,96 @@ header{
     font-weight:600;
 
     }
+/* PRODUCT DETAIL */
+
+
+.product-detail{
+
+    padding:130px 8% 80px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+}
+
+
+.product-image img{
+
+    width:100%;
+
+}
+
+
+.product-info-detail h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:38px;
+
+}
+
+
+.product-info-detail h2{
+
+    color:#b08d57;
+
+    margin:20px 0;
+
+}
+
+
+.product-info-detail p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+
+.size{
+
+    display:flex;
+
+    gap:12px;
+
+    margin:20px 0;
+
+}
+
+
+.size button{
+
+    width:45px;
+
+    height:45px;
+
+    background:white;
+
+    border:1px solid #111;
+
+    cursor:pointer;
+
+}
+
+
+.add-cart{
+
+    width:100%;
+
+    padding:16px;
+
+    background:#111;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    }
