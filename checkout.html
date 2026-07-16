@@ -177,7 +177,64 @@ window.location.href="success.html";
 
 </script>
 
+<script>
 
+let user = localStorage.getItem("user");
+
+
+let menu = document.getElementById("profileMenu");
+
+let username = document.getElementById("username");
+
+
+
+if(user && menu && username){
+
+
+username.innerHTML = user;
+
+
+
+menu.innerHTML = `
+
+
+<a href="account.html">
+Pengaturan
+</a>
+
+
+<a href="orders.html">
+Pesanan
+</a>
+
+
+<a href="wishlist.html">
+Wishlist
+</a>
+
+
+<a href="#" onclick="logout()">
+Logout
+</a>
+
+
+`;
+
+}
+
+
+
+
+function logout(){
+
+localStorage.removeItem("user");
+
+window.location.href="login.html";
+
+}
+
+
+</script>
 
 </body>
 
