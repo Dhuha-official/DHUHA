@@ -1,50 +1,64 @@
-/* ===== RESET ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ===== BODY ===== */
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #111111;
-    color: #ffffff;
+body{
+    background:#111;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #111111;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:25px 8%;
 }
 
-/* ===== LOGO ===== */
-.logo {
-    font-family: 'Cinzel', serif;
-    font-size: 34px;
-    font-weight: 700;
-    color: #C9A227;
+.logo{
+    font-family:'Cinzel',serif;
+    font-size:34px;
+    font-weight:700;
+    color:#C9A227;
 }
 
-/* ===== MENU ===== */
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
+.nav-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:14px;
 }
 
-/* ===== LINK ===== */
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+.nav-icons{
+    display:flex;
+    gap:28px;
 }
 
-.nav-menu a:hover {
-    color: #C9A227;
+.nav-icons a{
+    color:#fff;
+}
+
+.nav-icons svg{
+    width:22px;
+    height:22px;
+    stroke-width:1.7;
+}
+
+.nav-text{
+    display:flex;
+    gap:40px;
+}
+
+.nav-text a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-text a:hover,
+.nav-icons a:hover{
+    color:#C9A227;
 }
