@@ -275,3 +275,46 @@ header{
 }
 
 }
+/* BEST SELLER MANUAL SLIDER */
+
+.best-seller{
+
+    padding:90px 0;
+
+    overflow:hidden;
+
+}
+
+
+.manual-slider{
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+    padding:0 40px;
+
+}
+
+
+.manual-slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+.manual-track{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+
+.manual-track .slide-card{
+
+    flex:0 0 220px;
+
+    }
