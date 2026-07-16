@@ -39,13 +39,70 @@ shopping_bag
 </a>
 
 
-<a href="login.html" class="icon">
+<header>
+
+<div class="logo">
+DHUHA
+</div>
+
+
+<div class="header-right">
+
+
+<a href="cart.html" class="icon">
+
+<span class="material-symbols-outlined">
+shopping_bag
+</span>
+
+</a>
+
+
+
+
+<div class="profile-menu">
+
+
+<button class="profile-btn">
+
 
 <span class="material-symbols-outlined">
 person
 </span>
 
+
+<span id="username"></span>
+
+
+</button>
+
+
+
+
+<div class="dropdown" id="profileMenu">
+
+
+<a href="login.html">
+Masuk
 </a>
+
+
+<a href="register.html">
+Daftar
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</header>
 
 </div>
 
@@ -216,7 +273,64 @@ updateCart();
 
 </script>
 
+<script>
 
+let user = localStorage.getItem("user");
+
+
+let menu = document.getElementById("profileMenu");
+
+let username = document.getElementById("username");
+
+
+
+if(user && menu && username){
+
+
+username.innerHTML = user;
+
+
+
+menu.innerHTML = `
+
+
+<a href="account.html">
+Pengaturan
+</a>
+
+
+<a href="orders.html">
+Pesanan
+</a>
+
+
+<a href="wishlist.html">
+Wishlist
+</a>
+
+
+<a href="#" onclick="logout()">
+Logout
+</a>
+
+
+`;
+
+}
+
+
+
+
+function logout(){
+
+localStorage.removeItem("user");
+
+window.location.href="login.html";
+
+}
+
+
+</script>
 
 </body>
 
