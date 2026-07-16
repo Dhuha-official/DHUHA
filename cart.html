@@ -1,14 +1,23 @@
 <script>
 
-let name = localStorage.getItem("cartProduct");
-let price = localStorage.getItem("cartPrice");
-let image = localStorage.getItem("cartImage");
+let name = localStorage.getItem("cartProduct") || "Produk DHUHA";
+
+let price = Number(localStorage.getItem("cartPrice")) || 0;
+
+let image = localStorage.getItem("cartImage") || "assets/images/product1.png";
+
 
 let qty = 1;
 
 
 
-document.getElementById("cartProduct").innerHTML = `
+const cartProduct = document.getElementById("cartProduct");
+
+const cartTotal = document.getElementById("cartTotal");
+
+
+
+cartProduct.innerHTML = `
 
 <img src="${image}">
 
@@ -21,7 +30,7 @@ ${name}
 
 
 <p>
-Rp${Number(price).toLocaleString()}
+Rp${price.toLocaleString()}
 </p>
 
 
@@ -57,10 +66,10 @@ function updateCart(){
 document.getElementById("qty").innerHTML = qty;
 
 
-let total = Number(price) * qty;
+let total = price * qty;
 
 
-document.getElementById("cartTotal").innerHTML =
+cartTotal.innerHTML =
 "Rp" + total.toLocaleString();
 
 }
@@ -93,5 +102,7 @@ updateCart();
 
 updateCart();
 
-
+<div id="cartProduct"></div>
+  <h3 id="cartTotal"></h3>
+  
 </script>
