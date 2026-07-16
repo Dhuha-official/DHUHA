@@ -256,15 +256,37 @@ header{
     gap:8px;
 }
 
-
-.filter-box{
-    margin-top:20px;
-
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
+.filter-menu{
+    position:relative;
 }
 
+
+.filter-box{
+    display:none;
+
+    position:absolute;
+    top:50px;
+    left:0;
+
+    background:#fff;
+
+    width:220px;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    z-index:100;
+}
+
+
+.filter-menu:hover .filter-box{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
 
 .filter-box label{
     font-size:14px;
