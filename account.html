@@ -1,131 +1,158 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Account | DHUHA</title>
 
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+
+
 <link rel="stylesheet" href="assets/css/style.css">
 
+
+
 </head>
+
+
 
 
 <body>
 
 
-<header>
+
+<header id="header">
+
 
 <div class="logo">
+
 DHUHA
+
 </div>
 
+
 </header>
+<section class="checkout-page">
+
+
+<div class="checkout-box">
 
 
 
+<div class="section-title">
 
-<section class="account-page">
 
+<h2>
 
-<h1>
 MY ACCOUNT
-</h1>
+
+</h2>
+
+
+</div>
 
 
 
-<div class="account-box">
 
 
-<label>
-Nama
-</label>
-
-<input type="text" id="name">
+<div class="order-summary">
 
 
 
-<label>
-Email
-</label>
+<span class="material-symbols-outlined">
 
-<input type="email" id="email">
+person
 
-
-
-<label>
-Alamat Pengiriman
-</label>
-
-<textarea id="address"></textarea>
+</span>
 
 
 
-<button onclick="saveProfile()">
 
-SIMPAN
+<h3 id="accountName">
+
+</h3>
+
+
+
+
+<p id="accountEmail">
+
+</p>
+
+
+
+</div>
+
+
+
+
+<a href="index.html" class="checkout-btn">
+
+KEMBALI KE BERANDA
+
+</a>
+
+
+
+<button class="checkout-btn" onclick="logout()">
+
+LOGOUT
 
 </button>
 
 
+
 </div>
 
 
+
 </section>
-
-
-
+<script src="assets/js/main.js"></script>
 
 
 <script>
 
 
-document.getElementById("name").value =
-localStorage.getItem("user") || "";
+let name = localStorage.getItem("user") || "User";
+
+
+let email = localStorage.getItem("userEmail") || "-";
 
 
 
-document.getElementById("email").value =
-localStorage.getItem("email") || "";
+document.getElementById("accountName").innerHTML = name;
 
 
-
-document.getElementById("address").value =
-localStorage.getItem("address") || "";
-
+document.getElementById("accountEmail").innerHTML = email;
 
 
 
 
-function saveProfile(){
+function logout(){
 
 
-localStorage.setItem(
-"user",
-document.getElementById("name").value
-);
+localStorage.removeItem("user");
 
 
-
-localStorage.setItem(
-"email",
-document.getElementById("email").value
-);
+localStorage.removeItem("userEmail");
 
 
-
-localStorage.setItem(
-"address",
-document.getElementById("address").value
-);
-
-
-
-alert("Profil berhasil disimpan");
-
-window.location.href = "index.html";
+window.location.href="login.html";
 
 
 }
@@ -133,6 +160,8 @@ window.location.href = "index.html";
 
 
 </script>
+
+
 
 
 </body>
