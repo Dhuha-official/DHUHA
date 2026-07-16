@@ -889,20 +889,33 @@ header{
 
 
 }
-.filter-box{
-    display:none;
-    position:absolute;
-    top:55px;
-    left:0;
-    background:#fff;
-    padding:20px;
-    width:220px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    z-index:10;
+.filter-menu{
+    position:relative;
 }
 
-.filter-menu:hover .filter-box{
-    display:flex;
+
+.filter-box{
+    display:none;
+
+    position:absolute;
+
+    top:55px;
+
+    left:0;
+
+    width:220px;
+
+    background:#fff;
+
+    padding:20px;
+
     flex-direction:column;
+
     gap:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    border-radius:12px;
+
+    z-index:999;
 }
