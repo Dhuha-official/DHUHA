@@ -70,14 +70,7 @@ SHOPPING BAG
 
 <div>
 
-<h3>
-Built With Faith Oversize
-</h3>
-
-<p>
-Rp149.000
-</p>
-
+<div id="cartProduct"></div>
 
 <div class="quantity">
 
@@ -126,7 +119,41 @@ CHECKOUT
 
 </section>
 
+<script>
 
+let name = localStorage.getItem("cartProduct");
+
+let price = localStorage.getItem("cartPrice");
+
+let image = localStorage.getItem("cartImage");
+
+
+document.getElementById("cartProduct").innerHTML = `
+
+<img src="${image}">
+
+<div>
+
+<h3>${name}</h3>
+
+<p>Rp${Number(price).toLocaleString()}</p>
+
+
+<div class="quantity">
+
+<button>-</button>
+
+<span>1</span>
+
+<button>+</button>
+
+</div>
+
+</div>
+
+`;
+
+</script>
 
 </body>
 
