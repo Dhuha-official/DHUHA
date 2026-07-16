@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Product | DHUHA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
+
 <link rel="stylesheet" href="assets/css/style.css">
 
+
+
 </head>
+
 
 
 <body>
 
 
-<header>
+
+<header id="header">
+
 
 <div class="logo">
+
 DHUHA
+
 </div>
+
+
 
 
 <div class="header-right">
 
+
 <a href="cart.html" class="icon">
+
 
 <span class="material-symbols-outlined">
 shopping_bag
 </span>
 
+
 </a>
+
 
 
 <div class="profile-menu">
@@ -43,11 +65,14 @@ shopping_bag
 
 <button class="profile-btn">
 
+
 <span class="material-symbols-outlined">
 person
 </span>
 
+
 <span id="username"></span>
+
 
 </button>
 
@@ -72,40 +97,53 @@ Daftar
 </div>
 
 
+
 </div>
 
+
 </header>
-
-
-
 <section class="product-detail">
 
 
 <div class="product-image">
 
-<img src="assets/images/product1.png">
+
+<img id="productImage" src="assets/icons/placeholder.png">
+
 
 </div>
+
+
 
 
 
 <div class="product-info-detail">
 
 
-<h1>
+<h1 id="productName">
+
 Built With Faith Oversize
+
 </h1>
 
 
-<h2>
-Rp149.000
+
+<h2 id="productPrice">
+
+Rp198.000
+
 </h2>
 
 
 
-<p>
+
+<p id="productDescription">
+
 Premium oversize t-shirt DHUHA dengan konsep Built With Faith.
+
 </p>
+
+
 
 
 
@@ -114,111 +152,57 @@ Pilih Ukuran
 </h3>
 
 
+
+
 <div class="size">
 
-<button>S</button>
-<button>M</button>
-<button>L</button>
-<button>XL</button>
+
+<button>
+S
+</button>
+
+
+<button>
+M
+</button>
+
+
+<button>
+L
+</button>
+
+
+<button>
+XL
+</button>
+
+
 
 </div>
+
+
 
 
 
 <button class="add-cart" onclick="addToCart()">
+
 ADD TO CART
+
 </button>
+
 
 
 </div>
 
 
+
 </section>
+<script src="assets/js/main.js"></script>
 
-<script>
-
-function addToCart(){
-
-    localStorage.setItem(
-        "cartProduct",
-        "Built With Faith Oversize"
-    );
-
-    localStorage.setItem(
-        "cartPrice",
-        "149000"
-    );
-
-    localStorage.setItem(
-        "cartImage",
-        "assets/images/product1.png"
-    );
-
-    window.location.href = "cart.html";
-
-}
-
-</script>
-
-<script>
-
-let user = localStorage.getItem("user");
-
-
-let menu = document.getElementById("profileMenu");
-
-let username = document.getElementById("username");
+<script src="assets/js/product.js"></script>
 
 
 
-if(user && menu && username){
-
-
-username.innerHTML = user;
-
-
-
-menu.innerHTML = `
-
-
-<a href="account.html">
-Pengaturan
-</a>
-
-
-<a href="orders.html">
-Pesanan
-</a>
-
-
-<a href="wishlist.html">
-Wishlist
-</a>
-
-
-<a href="#" onclick="logout()">
-Logout
-</a>
-
-
-`;
-
-}
-
-
-
-
-function logout(){
-
-localStorage.removeItem("user");
-
-window.location.href="login.html";
-
-}
-
-
-</script>
-    
 </body>
 
 </html>
