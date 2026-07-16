@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Login | DHUHA</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="assets/css/style.css">
 
 
+
 </head>
+
+
 
 
 <body>
 
 
 
+
 <section class="login-page">
 
 
+
 <div class="login-box">
+
 
 
 <h1>
@@ -37,10 +49,6 @@ DHUHA
 <h2>
 MASUK
 </h2>
-
-
-
-
 <input 
 type="email"
 id="email"
@@ -71,9 +79,10 @@ MASUK
 Belum punya akun?
 
 <a href="register.html">
-Daftar
-</a>
 
+Daftar
+
+</a>
 
 </p>
 
@@ -83,33 +92,49 @@ Daftar
 
 
 </section>
-
-
-
-
-
-
 <script>
+
 
 function login(){
 
-let name = localStorage.getItem("name");
 
 
-if(name){
+let email = document.getElementById("email").value;
 
-localStorage.setItem("user", name);
 
-}else{
 
-localStorage.setItem("user", "Member DHUHA");
+if(!email){
+
+
+alert("Masukkan email");
+
+
+return;
+
 
 }
 
 
+
+
+localStorage.setItem(
+
+"user",
+
+email
+
+);
+
+
+
+
 window.location.href="index.html";
 
-  }
+
+
+}
+
+
 
 </script>
 
