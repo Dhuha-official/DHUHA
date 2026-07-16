@@ -1,52 +1,31 @@
-document.addEventListener("DOMContentLoaded", function(){
-
+document.addEventListener("DOMContentLoaded", async function(){
 
 
 const productList = document.getElementById("productList");
 
 
 
-let products = [
+async function loadProducts(){
 
 
-{
-name:"Built With Faith Oversize",
-price:"Rp198.000",
-image:"assets/icons/placeholder.png",
-category:"Kaos"
-},
+const { data, error } = await supabaseClient
+
+.from("products")
+
+.select("*")
+
+.order("id", { ascending:false });
 
 
-{
-name:"Guardian Cat Oversize",
-price:"Rp189.000",
-image:"assets/icons/placeholder.png",
-category:"Kaos"
-},
 
+if(error){
 
-{
-name:"Iconic Polo Set",
-price:"Rp249.000",
-image:"assets/icons/placeholder.png",
-category:"Polo"
-},
+console.log(error);
 
+return;
 
-{
-name:"DHUHA Parfum",
-price:"Rp199.000",
-image:"assets/icons/placeholder.png",
-category:"Parfum"
 }
 
-
-];
-
-
-
-
-function loadProducts(data){
 
 
 productList.innerHTML="";
@@ -59,23 +38,31 @@ data.forEach(product=>{
 productList.innerHTML += `
 
 
-<a href="product.html" class="shop-card">
+<a href="product.html?id=${product.id}" class="shop-card">
 
 
-<img src="${product.image}">
+<img src="${product.image_url}">
+
 
 
 <h3>
+
 ${product.name}
+
 </h3>
 
 
+
 <p>
-${product.price}
+
+Rp${Number(product.price).toLocaleString("id-ID")}
+
 </p>
 
 
+
 </a>
+
 
 
 `;
@@ -85,40 +72,12 @@ ${product.price}
 });
 
 
-}
-
-
-
-
-loadProducts(products);
-
-
-
-
-
-window.toggleFilter=function(){
-
-
-let box=document.getElementById("filterBox");
-
-
-if(box.style.display==="flex"){
-
-
-box.style.display="none";
-
-
-}else{
-
-
-box.style.display="flex";
-
 
 }
 
 
-}
 
+loadProducts();
 
 
 
