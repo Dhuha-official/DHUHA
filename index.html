@@ -91,5 +91,61 @@
     </div>
 
 </section>
+<script>
+
+const products=[
+
+{
+name:"Oversize Built With Faith",
+price:"Rp149.000",
+image:"assets/images/product1.jpg"
+},
+
+{
+name:"Premium Polo",
+price:"Rp199.000",
+image:"assets/images/product2.jpg"
+},
+
+{
+name:"Lifestyle Jersey",
+price:"Rp189.000",
+image:"assets/images/product3.jpg"
+},
+
+{
+name:"Heritage Oversize",
+price:"Rp159.000",
+image:"assets/images/product4.jpg"
+}
+
+];
+
+const container=document.getElementById("newCollection");
+
+products.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="product-card">
+
+<img src="${item.image}">
+
+<div class="product-info">
+
+<div class="product-name">${item.name}</div>
+
+<div class="product-price">${item.price}</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+    </script>
+    
 </body>
 </html>
