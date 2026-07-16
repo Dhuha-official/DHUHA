@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Cart | DHUHA</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
 
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
+
+
 <link rel="stylesheet" href="assets/css/style.css">
 
+
+
 </head>
+
+
 
 
 <body>
 
 
-<header>
+
+
+<header id="header">
+
 
 <div class="logo">
+
 DHUHA
+
 </div>
 
-
-<div class="header-right">
-
-<a href="cart.html" class="icon">
-
-<span class="material-symbols-outlined">
-shopping_bag
-</span>
-
-</a>
-
-
-<header>
-
-<div class="logo">
-DHUHA
-</div>
 
 
 <div class="header-right">
 
 
-<a href="cart.html" class="icon">
+<a href="shop.html" class="icon">
+
 
 <span class="material-symbols-outlined">
 shopping_bag
 </span>
 
-</a>
 
+</a>
 
 
 
@@ -78,7 +82,6 @@ person
 
 
 
-
 <div class="dropdown" id="profileMenu">
 
 
@@ -95,36 +98,35 @@ Daftar
 </div>
 
 
-</div>
-
-
 
 </div>
+
+
+</div>
+
 
 
 </header>
-
-</div>
-
-</header>
-
-
-
-
 <section class="cart-page">
 
 
-<h1>
+<div class="section-title">
+
+<h2>
 SHOPPING BAG
-</h1>
-
-
-
-<div class="cart-item">
-
-    <div id="cartProduct"></div>
+</h2>
 
 </div>
+
+
+
+
+<div class="cart-item" id="cartItem">
+
+
+
+</div>
+
 
 
 
@@ -136,9 +138,13 @@ TOTAL
 </h2>
 
 
+
 <h3 id="cartTotal">
+
 Rp0
+
 </h3>
+
 
 
 
@@ -149,188 +155,17 @@ CHECKOUT
 </a>
 
 
+
 </div>
 
 
 
 </section>
+<script src="assets/js/main.js"></script>
 
+<script src="assets/js/cart.js"></script>
 
 
-
-
-<script>
-
-let name = localStorage.getItem("cartProduct") || "Produk DHUHA";
-
-let price = Number(localStorage.getItem("cartPrice")) || 0;
-
-let image = localStorage.getItem("cartImage") || "assets/images/product1.png";
-
-
-let qty = 1;
-
-
-
-const cartProduct = document.getElementById("cartProduct");
-
-const cartTotal = document.getElementById("cartTotal");
-
-
-
-cartProduct.innerHTML = `
-
-<img src="${image}">
-
-
-<div>
-
-<h3>
-${name}
-</h3>
-
-
-<p>
-Rp${price.toLocaleString()}
-</p>
-
-
-
-<div class="quantity">
-
-
-<button onclick="minus()">
--
-</button>
-
-
-<span id="qty">
-1
-</span>
-
-
-<button onclick="plus()">
-+
-</button>
-
-
-</div>
-
-
-</div>
-
-`;
-
-
-
-
-function updateCart(){
-
-
-document.getElementById("qty").innerHTML = qty;
-
-
-let total = price * qty;
-
-
-cartTotal.innerHTML =
-"Rp" + total.toLocaleString();
-
-
-}
-
-
-
-
-function plus(){
-
-qty++;
-
-updateCart();
-
-}
-
-
-
-
-function minus(){
-
-if(qty > 1){
-
-qty--;
-
-}
-
-updateCart();
-
-}
-
-
-
-updateCart();
-
-
-
-</script>
-
-<script>
-
-let user = localStorage.getItem("user");
-
-
-let menu = document.getElementById("profileMenu");
-
-let username = document.getElementById("username");
-
-
-
-if(user && menu && username){
-
-
-username.innerHTML = user;
-
-
-
-menu.innerHTML = `
-
-
-<a href="account.html">
-Pengaturan
-</a>
-
-
-<a href="orders.html">
-Pesanan
-</a>
-
-
-<a href="wishlist.html">
-Wishlist
-</a>
-
-
-<a href="#" onclick="logout()">
-Logout
-</a>
-
-
-`;
-
-}
-
-
-
-
-function logout(){
-
-localStorage.removeItem("user");
-
-window.location.href="login.html";
-
-}
-
-
-</script>
 
 </body>
 
