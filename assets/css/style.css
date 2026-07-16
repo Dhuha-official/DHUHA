@@ -946,3 +946,68 @@ text-decoration:none;
 border-radius:40px;
 
 }
+.login-page{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+
+.login-box{
+
+width:350px;
+
+text-align:center;
+
+}
+
+
+
+.login-box h1{
+
+font-family:'Cinzel',serif;
+
+letter-spacing:5px;
+
+}
+
+
+
+.login-box input{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border:1px solid #ddd;
+
+}
+
+
+
+.login-box button{
+
+width:100%;
+
+padding:15px;
+
+background:#111;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+margin-top:10px;
+
+}
