@@ -55,3 +55,16 @@ body {
 .nav-menu a:hover {
     color: #C9A227;
 }
+/* ===== Logo ===== */
+
+.logo img{
+    width:60px;
+    height:auto;
+    display:block;
+}
+
+/* ===== Navbar ===== */
+
+.navbar{
+    height:80px;
+}
