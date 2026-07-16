@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Account | DHUHA</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+DHUHA
+</div>
+
+</header>
+
+
+
+
+<section class="account-page">
+
+
+<h1>
+MY ACCOUNT
+</h1>
+
+
+
+<div class="account-box">
+
+
+<label>
+Nama
+</label>
+
+<input type="text" id="name">
+
+
+
+<label>
+Email
+</label>
+
+<input type="email" id="email">
+
+
+
+<label>
+Alamat Pengiriman
+</label>
+
+<textarea id="address"></textarea>
+
+
+
+<button onclick="saveProfile()">
+
+SIMPAN
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+document.getElementById("name").value =
+localStorage.getItem("user") || "";
+
+
+
+document.getElementById("email").value =
+localStorage.getItem("email") || "";
+
+
+
+document.getElementById("address").value =
+localStorage.getItem("address") || "";
+
+
+
+
+
+function saveProfile(){
+
+
+localStorage.setItem(
+"user",
+document.getElementById("name").value
+);
+
+
+
+localStorage.setItem(
+"email",
+document.getElementById("email").value
+);
+
+
+
+localStorage.setItem(
+"address",
+document.getElementById("address").value
+);
+
+
+
+alert("Profil berhasil disimpan");
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
