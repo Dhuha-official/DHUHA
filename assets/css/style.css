@@ -439,3 +439,74 @@ header{
     font-weight:600;
 
 }
+.filter-menu{
+
+    position:relative;
+
+    margin-bottom:40px;
+
+}
+
+
+.filter-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 25px;
+
+    background:white;
+
+    border:1px solid #111;
+
+    cursor:pointer;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+
+.filter-box{
+
+    position:absolute;
+
+    top:55px;
+
+    left:0;
+
+    width:230px;
+
+    background:white;
+
+    padding:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    display:none;
+
+    z-index:10;
+
+}
+
+
+.filter-box label{
+
+    display:block;
+
+    padding:10px 0;
+
+    cursor:pointer;
+
+}
+
+
+.filter-menu:hover .filter-box{
+
+    display:block;
+
+    }
