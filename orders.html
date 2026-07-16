@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Orders | DHUHA</title>
+
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header id="header">
+
+
+<div class="logo">
+
+DHUHA
+
+</div>
+
+
+</header>
+
+
+
+
+<section class="checkout-page">
+
+
+
+<div class="checkout-box">
+
+
+
+<div class="section-title">
+
+<h2>
+MY ORDERS
+</h2>
+
+</div>
+
+
+
+
+<div class="order-summary">
+
+
+<h3 id="orderStatus">
+
+Belum ada pesanan
+
+</h3>
+
+
+</div>
+
+
+
+<a href="shop.html" class="checkout-btn">
+
+BELANJA SEKARANG
+
+</a>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<script src="assets/js/main.js"></script>
+
+
+
+<script>
+
+
+let status = localStorage.getItem("orderStatus");
+
+
+
+if(status){
+
+
+document.getElementById("orderStatus").innerHTML=status;
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
