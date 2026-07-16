@@ -63,26 +63,34 @@
 
         <div class="profile-menu">
 
-            <button class="profile-btn">
 
-                <span class="material-symbols-outlined">
-                    person
-                </span>
+<button class="profile-btn">
 
-            </button>
+<span class="material-symbols-outlined">
+person
+</span>
+
+<span id="username"></span>
+
+</button>
 
 
-            <div class="dropdown">
 
-                <a href="login.html">
-                    Masuk
-                </a>
+<div class="dropdown" id="profileMenu">
 
-                <a href="register.html">
-                    Daftar
-                </a>
 
-            </div>
+<a href="login.html">
+Masuk
+</a>
+
+
+<a href="register.html">
+Daftar
+</a>
+
+
+</div>
+
 
         </div>
 
@@ -226,6 +234,69 @@
 </a>
              </section>
 
+<script>
+
+
+let user = localStorage.getItem("user");
+
+
+let menu = document.getElementById("profileMenu");
+
+let username = document.getElementById("username");
+
+
+
+if(user){
+
+
+username.innerHTML = user;
+
+
+
+menu.innerHTML = `
+
+
+<a href="account.html">
+Pengaturan
+</a>
+
+
+<a href="orders.html">
+Pesanan
+</a>
+
+
+<a href="wishlist.html">
+Wishlist
+</a>
+
+
+<a onclick="logout()">
+Logout
+</a>
+
+
+`;
+
+
+}
+
+
+
+function logout(){
+
+
+localStorage.removeItem("user");
+
+
+window.location.href="index.html";
+
+
+}
+
+
+</script>
+    
 </body>
 
 </html>
