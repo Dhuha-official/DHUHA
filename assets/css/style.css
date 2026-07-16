@@ -113,26 +113,20 @@ header.scrolled{
 
 }
 
-
-
-
-
-/* PROFILE */
-
+/* =====================
+   PROFILE FIX
+===================== */
 
 .profile-menu{
-
     position:relative;
-
 }
-
 
 
 .profile-btn{
 
-    border:none;
-
     background:none;
+
+    border:none;
 
     cursor:pointer;
 
@@ -142,6 +136,10 @@ header.scrolled{
 
     align-items:center;
 
+    justify-content:center;
+
+    padding:0;
+
 }
 
 
@@ -150,23 +148,31 @@ header.scrolled{
 
     font-size:28px;
 
+    line-height:28px;
+
 }
 
 
 
 #username{
 
-    font-size:12px;
+    display:block;
 
-    margin-top:3px;
+    margin-top:4px;
 
-    max-width:80px;
+    font-size:11px;
+
+    line-height:13px;
+
+    text-align:center;
+
+    max-width:75px;
 
     overflow:hidden;
 
-    text-overflow:ellipsis;
-
     white-space:nowrap;
+
+    text-overflow:ellipsis;
 
 }
 
@@ -174,23 +180,31 @@ header.scrolled{
 
 .dropdown{
 
-    display:none;
-
     position:absolute;
 
-    right:0;
+    top:65px;
 
-    top:60px;
+    right:0;
 
     width:180px;
 
     background:#fff;
 
+    border-radius:12px;
+
     box-shadow:0 10px 25px rgba(0,0,0,.15);
 
-    border-radius:10px;
+    display:none;
 
     overflow:hidden;
+
+}
+
+
+
+.profile-menu:hover .dropdown{
+
+    display:block;
 
 }
 
@@ -200,7 +214,7 @@ header.scrolled{
 
     display:block;
 
-    padding:14px;
+    padding:14px 18px;
 
 }
 
@@ -211,12 +225,6 @@ header.scrolled{
     background:#f5f5f5;
 
 }
-
-
-
-.profile-menu:hover .dropdown{
-
-    display:block;
 /* =====================
    HERO
 ===================== */
@@ -568,3 +576,68 @@ header{
 
 }
 }
+/* =====================
+   SLIDER AUTO
+===================== */
+
+
+.slider-container{
+
+    overflow:hidden;
+
+}
+
+
+
+.slider-track{
+
+    display:flex;
+
+    gap:25px;
+
+    width:max-content;
+
+    animation:slide 18s linear infinite;
+
+}
+
+
+
+.slider-track:hover{
+
+    animation-play-state:paused;
+
+}
+
+
+
+.slide-card{
+
+    width:260px;
+
+    flex-shrink:0;
+
+}
+
+
+
+@keyframes slide{
+
+
+0%{
+
+transform:translateX(0);
+
+}
+
+
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+
+
+   }
