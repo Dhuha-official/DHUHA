@@ -1,60 +1,78 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Register | DHUHA</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 
 <link rel="stylesheet" href="assets/css/style.css">
 
+
+
 </head>
+
+
 
 
 <body>
 
 
+
+
 <section class="login-page">
+
 
 
 <div class="login-box">
 
 
+
 <h1>
+
 DHUHA
+
 </h1>
 
 
+
 <h2>
+
 DAFTAR
+
 </h2>
-
-
-
-<input 
+<input
 type="text"
 id="name"
 placeholder="Nama Lengkap">
 
 
 
-<input 
+<input
 type="email"
 id="email"
 placeholder="Email">
 
 
 
-<input 
+<input
 type="password"
 id="password"
 placeholder="Password">
+
+
 
 
 
@@ -66,53 +84,91 @@ DAFTAR
 
 
 
+
+
 <p>
 
 Sudah punya akun?
 
 <a href="login.html">
+
 Masuk
+
 </a>
 
 </p>
+
 
 
 </div>
 
 
 </section>
-
-
-
-
 <script>
 
 
 function register(){
 
-let name =
-document.getElementById("name").value;
 
+
+let name = document.getElementById("name").value;
+
+
+let email = document.getElementById("email").value;
+
+
+
+if(!name || !email){
+
+
+alert("Lengkapi data");
+
+
+return;
+
+
+}
+
+
+
+
+// simpan nama untuk profil
 
 localStorage.setItem(
-"name",
-name
-);
 
-
-localStorage.setItem(
 "user",
+
 name
+
 );
+
+
+
+// simpan email
+
+localStorage.setItem(
+
+"userEmail",
+
+email
+
+);
+
+
+
 
 
 window.location.href="index.html";
+
+
 
 }
 
 
 
 </script>
+
+
 
 
 </body>
