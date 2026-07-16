@@ -4,16 +4,21 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Shop | DHUHA</title>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
+
 <link rel="stylesheet" href="assets/css/style.css">
+
 
 </head>
 
@@ -23,7 +28,7 @@
 
 
 
-<header>
+<header id="header">
 
 
 <div class="logo">
@@ -35,7 +40,7 @@ DHUHA
 <div class="header-right">
 
 
-<a href="cart.html" class="icon cart-icon">
+<a href="cart.html" class="icon">
 
 <span class="material-symbols-outlined">
 shopping_bag
@@ -45,11 +50,11 @@ shopping_bag
 
 
 
-
 <div class="profile-menu">
 
 
 <button class="profile-btn">
+
 
 <span class="material-symbols-outlined">
 person
@@ -60,7 +65,6 @@ person
 
 
 </button>
-
 
 
 
@@ -88,82 +92,68 @@ Daftar
 
 
 </header>
+<section class="collection-section shop-page">
 
 
+<div class="section-title">
 
-
-
-<section class="shop-page">
-
-
-<h1>
+<h2>
 DHUHA
-</h1>
+</h2>
+
+</div>
 
 
 
+<!-- FILTER -->
 
 <div class="filter-menu">
 
 
 <button class="filter-btn" onclick="toggleFilter()">
 
+
 <span class="material-symbols-outlined">
-menu
+tune
 </span>
+
 
 FILTER
 
+
 </button>
+
 
 
 <div class="filter-box" id="filterBox">
 
 
 <label>
-<input type="checkbox">
+<input type="checkbox" value="Kaos">
 Kaos
 </label>
 
 
 <label>
-<input type="checkbox">
-Kemeja
-</label>
-
-
-<label>
-<input type="checkbox">
+<input type="checkbox" value="Polo">
 Polo
 </label>
 
 
 <label>
-<input type="checkbox">
+<input type="checkbox" value="Hoodie">
+Hoodie
+</label>
+
+
+<label>
+<input type="checkbox" value="Oneset">
 Oneset
 </label>
 
 
 <label>
-<input type="checkbox">
-Sportwear
-</label>
-
-
-<label>
-<input type="checkbox">
-Jacket
-</label>
-
-
-<label>
-<input type="checkbox">
-Aksesoris
-</label>
-
-
-<label>
-<input type="checkbox">
+<input type="checkbox" value="Parfum">
 Parfum
 </label>
 
@@ -178,180 +168,26 @@ Parfum
 
 
 
-
-<div class="shop-grid">
-
+<!-- PRODUCT LIST -->
 
 
-<a href="product.html" class="shop-card">
-
-<img src="assets/images/product1.png">
-
-<h3>
-Parfum by RIDHU - Rikuh 
-</h3>
-
-<p>
-Rp199.000
-</p>
-
-</a>
+<div class="shop-grid" id="productList">
 
 
 
-
-<a href="product.html" class="shop-card">
-
-<img src="assets/images/product2.png">
-
-<h3>
-Parfum by RIDHU - Veil
-</h3>
-
-<p>
-Rp159.000
-</p>
-
-</a>
-
-
-
-
-
-<a href="product.html" class="shop-card">
-
-<img src="assets/images/product3.png">
-
-<h3>
-The Guardian Cat Oversize
-</h3>
-
-<p>
-Rp189.000
-</p>
-
-</a>
-
-
-
-
-
-<a href="product.html" class="shop-card">
-
-<img src="assets/images/product4.png">
-
-<h3>
-Built With Faith Oversize
-</h3>
-
-<p>
-Rp198.000
-</p>
-
-</a>
-
+<!-- DATA PRODUK DARI SUPABASE MASUK DI SINI -->
 
 
 </div>
 
 
 
-
 </section>
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/shop.js"></script>
 
 
-
-
-
-
-
-
-<script>
-
-
-let user = localStorage.getItem("user");
-
-
-let menu = document.getElementById("profileMenu");
-
-let username = document.getElementById("username");
-
-
-
-if(user && menu && username){
-
-
-username.innerHTML = user;
-
-
-
-menu.innerHTML = `
-
-
-<a href="account.html">
-Pengaturan
-</a>
-
-
-<a href="orders.html">
-Pesanan
-</a>
-
-
-<a href="wishlist.html">
-Wishlist
-</a>
-
-
-<a href="#" onclick="logout()">
-Logout
-</a>
-
-
-`;
-
-
-}
-
-
-
-
-
-function logout(){
-
-
-localStorage.removeItem("user");
-
-
-window.location.href="login.html";
-
-
-}
-
-
-
-</script>
-
-
-<script>
-
-function toggleFilter(){
-
-let filter = document.getElementById("filterBox");
-
-if(filter.style.display === "flex"){
-
-filter.style.display="none";
-
-}else{
-
-filter.style.display="flex";
-
-}
-
-}
-
-</script>
 
 </body>
 
