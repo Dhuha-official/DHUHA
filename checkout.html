@@ -8,6 +8,7 @@
 
 <title>Checkout | DHUHA</title>
 
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
@@ -23,7 +24,6 @@
 <div class="logo">
 DHUHA
 </div>
-
 
 </header>
 
@@ -44,7 +44,7 @@ CHECKOUT
 
 
 <h2>
-Alamat Pengiriman
+Data Pengiriman
 </h2>
 
 
@@ -55,6 +55,7 @@ Alamat Pengiriman
 
 
 <textarea placeholder="Alamat Lengkap"></textarea>
+
 
 
 
@@ -72,6 +73,9 @@ Transfer Bank
 </label>
 
 
+<br>
+
+
 <label>
 
 <input type="radio" name="payment">
@@ -83,25 +87,24 @@ COD
 
 
 
+
 <div class="order-summary">
 
 
 <h2>
-Ringkasan Pesanan
+Pesanan
 </h2>
 
 
-<div id="checkoutProduct">
-
-</div>
+<div id="checkoutProduct"></div>
 
 
 <h3 id="checkoutTotal">
-
 </h3>
 
 
 </div>
+
 
 
 
@@ -121,23 +124,33 @@ BUAT PESANAN
 
 
 
+
 <script>
 
-let name = localStorage.getItem("cartProduct");
 
-let price = localStorage.getItem("cartPrice");
+let name = localStorage.getItem("cartProduct") || "Produk DHUHA";
 
-let image = localStorage.getItem("cartImage");
+
+let price = Number(localStorage.getItem("cartPrice")) || 0;
+
+
+let image = localStorage.getItem("cartImage") || "assets/images/product1.png";
 
 
 
 document.getElementById("checkoutProduct").innerHTML = `
 
 
-<p>${name}</p>
+<img src="${image}" width="120">
+
+
+<h3>
+${name}
+</h3>
+
 
 <p>
-Rp${Number(price).toLocaleString()}
+Rp${price.toLocaleString()}
 </p>
 
 
@@ -147,7 +160,7 @@ Rp${Number(price).toLocaleString()}
 
 document.getElementById("checkoutTotal").innerHTML =
 
-"Total : Rp" + Number(price).toLocaleString();
+"Total : Rp" + price.toLocaleString();
 
 
 
