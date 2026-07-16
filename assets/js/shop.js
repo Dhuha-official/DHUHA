@@ -14,6 +14,13 @@ const { data, error } = await supabaseClient
 
 .select("*")
 
+if(error){
+    console.log(error);
+    return;
+}
+
+console.log(data);
+  
 .order("id", { ascending:false });
 
 
