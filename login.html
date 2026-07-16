@@ -8,12 +8,18 @@
 
 <title>Login | DHUHA</title>
 
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
 <link rel="stylesheet" href="assets/css/style.css">
+
 
 </head>
 
 
 <body>
+
 
 
 <section class="login-page">
@@ -27,9 +33,12 @@ DHUHA
 </h1>
 
 
+
 <h2>
 MASUK
 </h2>
+
+
 
 
 <input 
@@ -38,10 +47,13 @@ id="email"
 placeholder="Email">
 
 
+
 <input 
 type="password"
 id="password"
 placeholder="Password">
+
+
 
 
 
@@ -52,12 +64,19 @@ MASUK
 </button>
 
 
+
+
 <p>
+
 Belum punya akun?
+
 <a href="register.html">
 Daftar
 </a>
+
+
 </p>
+
 
 
 </div>
@@ -68,11 +87,30 @@ Daftar
 
 
 
+
+
 <script>
+
 
 function login(){
 
+
 let email = document.getElementById("email").value;
+
+
+
+if(email === ""){
+
+
+alert("Masukkan email terlebih dahulu");
+
+
+return;
+
+
+}
+
+
 
 
 localStorage.setItem(
@@ -81,12 +119,18 @@ email
 );
 
 
-window.location.href="index.html";
+
+
+window.location.href = "index.html";
+
 
 
 }
 
+
+
 </script>
+
 
 
 </body>
