@@ -1,7 +1,7 @@
-const SUPABASE_URL = "MASUKKAN_URL_SUPABASE_ANDA";
+const SUPABASE_URL = "https://yjddkxffzqowrkkoqwth.supabase.co/rest/v1/";
 
 
-const SUPABASE_KEY = "MASUKKAN_ANON_KEY_SUPABASE_ANDA";
+const SUPABASE_KEY = "sb_publishable_hid0DW65Zkt-tLC4o56S9g_JXt4_uCK";
 
 
 
